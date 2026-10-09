@@ -72,8 +72,8 @@ p {
 
 .brand-block {
   justify-self: start;
-  background: var(--yellow);
   padding: 16px 22px 17px;
+  background: var(--yellow);
 }
 
 .nav-pills {
@@ -98,8 +98,8 @@ p {
 
 .connect-block {
   justify-self: end;
-  background: var(--blue);
   padding: 16px 28px 17px;
+  background: var(--blue);
   transition: transform 180ms ease;
 }
 
@@ -109,22 +109,22 @@ p {
 
 .hero {
   position: relative;
-  min-height: 930px;
+  min-height: 1020px;
   overflow: hidden;
   background: var(--hero);
-  padding: 152px 40px 56px;
+  padding: 152px 40px 90px;
 }
 
 .hero-copy {
   position: relative;
-  z-index: 3;
+  z-index: 5;
   max-width: 1240px;
   margin: 0 auto;
   text-align: center;
 }
 
 .hero-kicker {
-  margin-bottom: 22px;
+  margin-bottom: 24px;
   font-size: 0.78rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -132,7 +132,7 @@ p {
 }
 
 .hero h1 {
-  margin-bottom: 34px;
+  margin-bottom: 38px;
   font-family: var(--serif);
   font-size: clamp(5rem, 8.6vw, 9.3rem);
   font-weight: 500;
@@ -142,17 +142,19 @@ p {
 
 .hero-intro {
   max-width: 610px;
-  margin: 0 auto 34px;
+  margin: 0 auto 46px;
   font-family: var(--serif);
   font-size: clamp(1.45rem, 2vw, 2rem);
   line-height: 1.08;
 }
 
 .work-link {
+  position: relative;
+  z-index: 6;
   display: inline-flex;
   align-items: center;
   gap: 28px;
-  padding: 13px 20px;
+  padding: 14px 20px;
   border-top: 1px dashed var(--line);
   border-bottom: 1px dashed var(--line);
   font-family: var(--serif);
@@ -173,42 +175,44 @@ p {
 .hero-art {
   position: absolute;
   left: 50%;
-  bottom: -150px;
-  width: 560px;
-  height: 330px;
-  transform: translateX(-50%);
+  bottom: -228px;
+  width: 540px;
+  height: 320px;
+  pointer-events: none;
+  transform: translateX(-50%) scale(.96);
+  transform-origin: center bottom;
 }
 
 .art-card {
   position: absolute;
-  border: 1px solid rgba(26, 25, 24, 0.45);
-  box-shadow: 0 28px 70px rgba(26, 25, 24, 0.12);
+  border: 1px solid rgba(26, 25, 24, 0.42);
+  box-shadow: 0 24px 55px rgba(26, 25, 24, 0.1);
 }
 
 .art-card-back {
-  left: 36px;
-  top: 36px;
-  width: 245px;
-  height: 180px;
+  left: 38px;
+  top: 62px;
+  width: 235px;
+  height: 172px;
   display: grid;
   place-content: center;
   gap: 7px;
   background: var(--lavender);
-  transform: rotate(-10deg);
+  transform: rotate(-9deg);
   font-family: var(--serif);
-  font-size: 2.2rem;
+  font-size: 2.05rem;
   line-height: 0.83;
 }
 
 .art-card-main {
-  right: 24px;
-  top: 0;
-  width: 330px;
-  height: 235px;
+  right: 28px;
+  top: 28px;
+  width: 315px;
+  height: 225px;
   padding: 20px;
   background: #202020;
   color: #f8f6f0;
-  transform: rotate(7deg);
+  transform: rotate(6deg);
 }
 
 .art-topline,
@@ -221,8 +225,8 @@ p {
 
 .art-code {
   display: grid;
-  gap: 12px;
-  margin: 38px 0 34px;
+  gap: 11px;
+  margin: 36px 0 31px;
 }
 
 .art-code span {
@@ -240,7 +244,7 @@ p {
 .section-pad {
   width: min(calc(100% - 56px), var(--max));
   margin: 0 auto;
-  padding: 128px 0;
+  padding: 138px 0;
 }
 
 .about {
@@ -253,7 +257,7 @@ p {
 
 .about-lead h2 {
   max-width: 760px;
-  margin-bottom: 26px;
+  margin-bottom: 30px;
   font-family: var(--serif);
   font-size: clamp(3.3rem, 5vw, 6rem);
   font-weight: 500;
@@ -274,7 +278,7 @@ p {
 }
 
 .profile-panel h3 {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   font-family: var(--serif);
   font-size: 1.6rem;
   font-weight: 600;
@@ -284,7 +288,7 @@ p {
   display: grid;
   grid-template-columns: 160px 1fr;
   gap: 24px;
-  padding: 16px 0;
+  padding: 17px 0;
   border-top: 1px dashed var(--line);
   font-family: var(--serif);
   font-size: 1.32rem;
@@ -304,11 +308,11 @@ p {
 }
 
 .portfolio {
-  padding-top: 70px;
+  padding-top: 82px;
 }
 
 .portfolio-heading {
-  margin-bottom: 38px;
+  margin-bottom: 44px;
 }
 
 .section-eyebrow {
@@ -337,7 +341,7 @@ p {
 .project-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
+  gap: 14px;
 }
 
 .project-card {
@@ -349,7 +353,17 @@ p {
   display: block;
   aspect-ratio: 1 / 0.92;
   overflow: hidden;
-  border: 1px solid rgba(26, 25, 24, 0.16);
+  border: 1px solid rgba(26, 25, 24, 0.14);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.project-visual::before {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  z-index: 4;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  pointer-events: none;
 }
 
 .project-visual::after {
@@ -357,8 +371,14 @@ p {
   position: absolute;
   right: 18px;
   top: 12px;
+  z-index: 5;
   font-size: 1.6rem;
   transition: transform 180ms ease;
+}
+
+.project-visual:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 38px rgba(26, 25, 24, 0.08);
 }
 
 .project-visual:hover::after {
@@ -367,29 +387,35 @@ p {
 
 .visual-caption {
   position: absolute;
-  left: 20px;
+  left: 22px;
   bottom: 18px;
+  z-index: 5;
   font-size: 0.74rem;
   font-weight: 700;
   letter-spacing: 0.12em;
 }
 
 .ethico-visual {
-  background: #83c8e2;
+  background: #91cde3;
 }
 
 .ethico-phone {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 42%;
-  height: 72%;
+  width: 40%;
+  height: 70%;
   padding: 26px 22px;
   border: 2px solid var(--ink);
   border-radius: 26px;
   background: #f5f3ed;
-  transform: translate(-50%, -50%) rotate(-4deg);
-  box-shadow: 14px 18px 0 rgba(26, 25, 24, 0.12);
+  transform: translate(-50%, -50%) rotate(-3deg);
+  box-shadow: 12px 16px 0 rgba(26, 25, 24, 0.1);
+  transition: transform 220ms ease;
+}
+
+.ethico-visual:hover .ethico-phone {
+  transform: translate(-50%, -51%) rotate(-2deg);
 }
 
 .phone-bar {
@@ -442,31 +468,31 @@ p {
   position: absolute;
   display: grid;
   place-items: center;
-  width: 112px;
-  height: 112px;
+  width: 96px;
+  height: 96px;
   border: 1px solid var(--ink);
   border-radius: 50%;
   background: var(--yellow);
-  font-size: 0.7rem;
+  font-size: 0.66rem;
   font-weight: 700;
   letter-spacing: 0.12em;
 }
 
 .orbit-one {
-  left: 9%;
-  top: 14%;
-  transform: rotate(-11deg);
+  left: 10%;
+  top: 16%;
+  transform: rotate(-9deg);
 }
 
 .orbit-two {
-  right: 8%;
-  bottom: 15%;
+  right: 9%;
+  bottom: 17%;
   background: var(--mint);
-  transform: rotate(8deg);
+  transform: rotate(7deg);
 }
 
 .wendler-visual {
-  background: #d8dcff;
+  background: #dde0ff;
 }
 
 .plate {
@@ -477,9 +503,9 @@ p {
   border: 2px solid var(--ink);
   background: #f8f5ed;
   font-family: var(--serif);
-  font-size: 3.2rem;
+  font-size: 3rem;
   font-weight: 600;
-  box-shadow: inset 0 0 0 16px rgba(26, 25, 24, 0.07);
+  box-shadow: inset 0 0 0 14px rgba(26, 25, 24, 0.06);
 }
 
 .plate::after {
@@ -494,50 +520,55 @@ p {
 .plate span {
   position: relative;
   z-index: 2;
-  transform: translateY(-46px);
+  transform: translateY(-43px);
 }
 
 .plate-one {
-  width: 250px;
-  height: 250px;
-  left: 8%;
-  top: 12%;
+  width: 232px;
+  height: 232px;
+  left: 9%;
+  top: 13%;
 }
 
 .plate-two {
-  width: 210px;
-  height: 210px;
-  right: 5%;
-  top: 9%;
+  width: 194px;
+  height: 194px;
+  right: 7%;
+  top: 11%;
   background: var(--yellow);
 }
 
 .plate-three {
-  width: 185px;
-  height: 185px;
-  left: 18%;
-  bottom: 3%;
+  width: 172px;
+  height: 172px;
+  left: 20%;
+  bottom: 5%;
   background: var(--mint);
 }
 
 .terminal-card {
   position: absolute;
-  right: 8%;
-  bottom: 8%;
-  width: 48%;
-  min-height: 42%;
+  right: 9%;
+  bottom: 9%;
+  width: 46%;
+  min-height: 40%;
   padding: 22px;
   background: #181818;
   color: #f8f7f1;
   border: 1px solid #181818;
-  transform: rotate(3deg);
-  box-shadow: 14px 16px 0 rgba(26, 25, 24, 0.12);
+  transform: rotate(2deg);
+  box-shadow: 12px 14px 0 rgba(26, 25, 24, 0.1);
+  transition: transform 220ms ease;
+}
+
+.wendler-visual:hover .terminal-card {
+  transform: rotate(1deg) translateY(-3px);
 }
 
 .terminal-head {
   padding-bottom: 14px;
   margin-bottom: 18px;
-  border-bottom: 1px solid rgba(255,255,255,.35);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
   font-size: 0.65rem;
   letter-spacing: 0.12em;
 }
@@ -553,13 +584,13 @@ p {
 }
 
 .project-copy {
-  min-height: 150px;
-  padding: 22px 4px 34px;
+  min-height: 156px;
+  padding: 24px 4px 38px;
 }
 
 .project-copy > p {
   max-width: 710px;
-  margin-bottom: 24px;
+  margin-bottom: 26px;
   font-family: var(--serif);
   font-size: 1.28rem;
   line-height: 1.22;
@@ -569,7 +600,7 @@ p {
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  padding-top: 12px;
+  padding-top: 13px;
   border-top: 1px dashed var(--soft-line);
   font-size: 0.74rem;
   font-weight: 600;
@@ -581,22 +612,22 @@ p {
 }
 
 .process {
-  max-width: 950px;
+  max-width: 980px;
   text-align: center;
 }
 
 .process-heading {
-  margin-bottom: 76px;
+  margin-bottom: 82px;
 }
 
 .process-heading h2 {
-  margin-bottom: 10px;
-  font-size: clamp(4rem, 6vw, 7rem);
-  line-height: 0.85;
+  margin-bottom: 14px;
+  font-size: clamp(3.7rem, 5.6vw, 6.5rem);
+  line-height: 0.88;
 }
 
 .process-heading p {
-  max-width: 610px;
+  max-width: 650px;
   margin: 0 auto;
   font-family: var(--serif);
   font-size: 1.32rem;
@@ -604,7 +635,7 @@ p {
 }
 
 .process-list article {
-  padding: 28px 0 34px;
+  padding: 30px 0 36px;
   border-bottom: 1px dashed var(--line);
 }
 
@@ -628,44 +659,45 @@ p {
 }
 
 .strengths {
-  padding-top: 74px;
+  padding-top: 84px;
 }
 
 .strengths > h2 {
-  margin-bottom: 36px;
+  max-width: 900px;
+  margin: 0 auto 46px;
   text-align: center;
-  font-size: clamp(4rem, 5vw, 6rem);
-  line-height: 0.9;
+  font-size: clamp(3.8rem, 5vw, 5.8rem);
+  line-height: 0.92;
 }
 
 .strength-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 10px;
+  gap: 12px;
 }
 
 .strength-card {
-  min-height: 455px;
+  min-height: 430px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 54px 46px;
+  padding: 52px 44px;
   background: var(--paper);
   text-align: center;
 }
 
 .strength-number {
-  margin-bottom: 54px;
+  margin-bottom: 48px;
   font-family: var(--serif);
-  font-size: 2.1rem;
+  font-size: 2rem;
   font-weight: 600;
 }
 
 .strength-card p {
-  margin-bottom: 44px;
+  margin-bottom: 40px;
   font-family: var(--serif);
-  font-size: 1.55rem;
+  font-size: 1.48rem;
   line-height: 1.18;
 }
 
@@ -678,7 +710,7 @@ p {
 }
 
 .contact {
-  min-height: 750px;
+  min-height: 720px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -687,16 +719,16 @@ p {
 }
 
 .contact h2 {
-  margin-bottom: 70px;
-  font-size: clamp(4.3rem, 6.5vw, 7.6rem);
-  line-height: 0.82;
+  margin-bottom: 64px;
+  font-size: clamp(4.1rem, 6.2vw, 7.2rem);
+  line-height: 0.84;
 }
 
 .contact-stack {
   position: relative;
   width: 310px;
   height: 145px;
-  margin-bottom: 48px;
+  margin-bottom: 50px;
 }
 
 .mini-card {
@@ -777,7 +809,12 @@ p {
   }
 
   .hero {
-    min-height: 860px;
+    min-height: 930px;
+  }
+
+  .hero-art {
+    bottom: -205px;
+    transform: translateX(-50%) scale(.9);
   }
 
   .about {
@@ -785,17 +822,14 @@ p {
     gap: 70px;
   }
 
-  .about-lead {
-    max-width: 850px;
-  }
-
+  .about-lead,
   .profile-panel {
     max-width: 850px;
   }
 
   .project-grid {
     grid-template-columns: 1fr;
-    gap: 48px;
+    gap: 52px;
   }
 
   .project-visual {
@@ -807,7 +841,7 @@ p {
   }
 
   .strength-card {
-    min-height: 330px;
+    min-height: 320px;
   }
 }
 
@@ -824,8 +858,8 @@ p {
   }
 
   .hero {
-    min-height: 780px;
-    padding: 118px 18px 40px;
+    min-height: 845px;
+    padding: 118px 18px 54px;
   }
 
   .hero h1 {
@@ -835,18 +869,19 @@ p {
 
   .hero-intro {
     max-width: 470px;
+    margin-bottom: 40px;
     font-size: 1.32rem;
   }
 
   .hero-art {
-    bottom: -125px;
+    bottom: -162px;
     width: 390px;
-    transform: translateX(-50%) scale(.82);
+    transform: translateX(-50%) scale(.74);
   }
 
   .section-pad {
     width: min(calc(100% - 28px), var(--max));
-    padding: 86px 0;
+    padding: 92px 0;
   }
 
   .about {
@@ -875,7 +910,7 @@ p {
   .portfolio-heading h2,
   .process-heading h2,
   .strengths > h2 {
-    font-size: clamp(3.4rem, 14vw, 5rem);
+    font-size: clamp(3.2rem, 13vw, 4.8rem);
   }
 
   .project-visual {
@@ -883,37 +918,37 @@ p {
   }
 
   .ethico-phone {
-    width: 52%;
-    height: 70%;
+    width: 50%;
+    height: 68%;
   }
 
   .ethico-orbit {
-    width: 82px;
-    height: 82px;
+    width: 76px;
+    height: 76px;
   }
 
   .plate-one {
-    width: 170px;
-    height: 170px;
+    width: 162px;
+    height: 162px;
   }
 
   .plate-two {
-    width: 145px;
-    height: 145px;
+    width: 138px;
+    height: 138px;
   }
 
   .plate-three {
-    width: 130px;
-    height: 130px;
+    width: 124px;
+    height: 124px;
   }
 
   .plate span {
-    transform: translateY(-33px);
-    font-size: 2.3rem;
+    transform: translateY(-31px);
+    font-size: 2.2rem;
   }
 
   .terminal-card {
-    width: 58%;
+    width: 56%;
   }
 
   .project-meta {
@@ -927,11 +962,11 @@ p {
   }
 
   .strength-number {
-    margin-bottom: 34px;
+    margin-bottom: 32px;
   }
 
   .strength-card p {
-    font-size: 1.34rem;
+    font-size: 1.32rem;
   }
 
   .contact {
@@ -940,7 +975,7 @@ p {
 
   .contact h2 {
     margin-bottom: 54px;
-    font-size: clamp(3.5rem, 15vw, 5.6rem);
+    font-size: clamp(3.3rem, 14vw, 5.2rem);
   }
 
   .site-footer {
@@ -970,7 +1005,7 @@ p {
   }
 
   .hero {
-    min-height: 730px;
+    min-height: 780px;
   }
 
   .hero h1 {
@@ -986,8 +1021,8 @@ p {
   }
 
   .hero-art {
-    transform: translateX(-50%) scale(.68);
-    bottom: -140px;
+    bottom: -150px;
+    transform: translateX(-50%) scale(.62);
   }
 
   .project-copy > p {
@@ -995,7 +1030,7 @@ p {
   }
 
   .ethico-phone {
-    width: 60%;
+    width: 58%;
   }
 
   .orbit-two {
