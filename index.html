@@ -4,217 +4,179 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Anders Wahlberg — Computer Science student at the University of Turku. Software development, data and AI.">
-    <title>Anders Wahlberg — Software, Data & AI</title>
+    <title>Anders Wahlberg — Computer Science</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header class="site-header">
-        <div class="container nav">
-            <a class="brand" href="#top" aria-label="Back to top">
-                <span class="brand-mark" aria-hidden="true"></span>
-                <span>Anders Wahlberg</span>
-            </a>
-
-            <nav class="nav-links" aria-label="Main navigation">
-                <a href="#projects">Projects</a>
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a class="nav-contact" href="#contact">Contact</a>
-            </nav>
-        </div>
+        <a class="wordmark" href="#top" aria-label="Back to top">AW.</a>
+        <nav class="site-nav" aria-label="Main navigation">
+            <a href="#work"><span>01</span> Work</a>
+            <a href="#about"><span>02</span> About</a>
+            <a href="#toolkit"><span>03</span> Toolkit</a>
+            <a href="#contact"><span>04</span> Contact</a>
+        </nav>
     </header>
 
     <main id="top">
         <section class="hero">
-            <div class="container hero-grid">
-                <div>
-                    <div class="eyebrow">
-                        <span class="eyebrow-dot" aria-hidden="true"></span>
-                        Computer Science · University of Turku
+            <div class="hero-meta">
+                <span>Turku, Finland</span>
+                <span>Computer Science</span>
+                <span>2026</span>
+            </div>
+
+            <div class="hero-name" aria-label="Anders Wahlberg">
+                <span>Anders</span>
+                <span>Wahlberg<span class="accent-dot">.</span></span>
+            </div>
+
+            <div class="hero-bottom">
+                <p class="hero-intro">
+                    Computer Science student at the University of Turku, building toward a career in
+                    <strong>software, data and AI.</strong>
+                </p>
+                <div class="hero-links">
+                    <a href="https://github.com/AndersWahlberg" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+                    <a href="https://www.linkedin.com/in/anders-wahlberg-126a4917a" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+                    <a href="mailto:anwahlbe@gmail.com">Email ↗</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="work" class="section ruled-section">
+            <div class="section-label">
+                <span>01</span>
+                <span>Selected work</span>
+            </div>
+
+            <div class="project-list">
+                <a class="project" href="https://github.com/AndersWahlberg/ethico-app" target="_blank" rel="noopener noreferrer">
+                    <div class="project-index">01</div>
+                    <div class="project-title">
+                        <h2>Ethico</h2>
+                        <span>Active project</span>
                     </div>
-
-                    <h1>Building useful things with <span class="hero-accent">software.</span></h1>
-
-                    <p class="hero-copy">
-                        I'm Anders — a Computer Science student with 15+ years of professional experience in
-                        operations, supply chain and data-driven business. I'm now building a career around
-                        <strong>software development, data and AI.</strong>
+                    <p class="project-description">
+                        A product-transparency application exploring barcode scanning, public data and source-backed information about products and the companies behind them.
                     </p>
+                    <p class="project-stack">Flutter / FastAPI / SQLite / REST / CI</p>
+                    <div class="project-arrow">↗</div>
+                </a>
 
-                    <div class="hero-actions">
-                        <a class="button button-primary" href="#projects">View projects</a>
-                        <a class="button button-secondary" href="https://github.com/AndersWahlberg" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-                        <a class="button button-secondary" href="https://www.linkedin.com/in/anders-wahlberg-126a4917a" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+                <a class="project" href="https://github.com/AndersWahlberg/wendler531" target="_blank" rel="noopener noreferrer">
+                    <div class="project-index">02</div>
+                    <div class="project-title">
+                        <h2>Wendler 5/3/1</h2>
+                        <span>Java application</span>
                     </div>
-                </div>
-
-                <aside class="hero-card" aria-label="Current focus">
-                    <div class="status-label">Current focus</div>
-                    <div class="focus-list">
-                        <div class="focus-item">
-                            <span>Studying</span>
-                            <span>Computer Science</span>
-                        </div>
-                        <div class="focus-item">
-                            <span>Building</span>
-                            <span>Ethico</span>
-                        </div>
-                        <div class="focus-item">
-                            <span>Exploring</span>
-                            <span>Software · Data · AI</span>
-                        </div>
-                        <div class="focus-item">
-                            <span>Based in</span>
-                            <span>Turku, Finland</span>
-                        </div>
-                    </div>
-                </aside>
+                    <p class="project-description">
+                        A command-line strength-training tracker with workout calculations, training history, estimated 1RM tracking, persistence and automated tests.
+                    </p>
+                    <p class="project-stack">Java 17 / Maven / JUnit / Gson / OOP</p>
+                    <div class="project-arrow">↗</div>
+                </a>
             </div>
         </section>
 
-        <section id="projects">
-            <div class="container">
-                <div class="section-heading">
-                    <div class="section-kicker">Selected work</div>
-                    <div>
-                        <h2>Projects built to solve real problems.</h2>
-                        <p>
-                            I learn best by building. These projects combine software engineering fundamentals
-                            with practical problems, experimentation and continuous iteration.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="projects-grid">
-                    <a class="project-card" href="https://github.com/AndersWahlberg/ethico-app" target="_blank" rel="noopener noreferrer">
-                        <div class="project-number">01 / ETHICO</div>
-                        <h3>Product transparency, backed by sources.</h3>
-                        <p>
-                            A mobile application exploring how barcode scanning, public data and transparent source handling
-                            can help consumers understand products and the companies behind them.
-                        </p>
-                        <div class="tags">
-                            <span class="tag">Flutter</span>
-                            <span class="tag">FastAPI</span>
-                            <span class="tag">SQLite</span>
-                            <span class="tag">REST APIs</span>
-                            <span class="tag">GitHub Actions</span>
-                        </div>
-                        <div class="project-link">View project <span>↗</span></div>
-                    </a>
-
-                    <a class="project-card" href="https://github.com/AndersWahlberg/wendler531" target="_blank" rel="noopener noreferrer">
-                        <div class="project-number">02 / WENDLER 5/3/1</div>
-                        <h3>Strength training logic in a Java CLI.</h3>
-                        <p>
-                            A command-line workout tracker for the Wendler 5/3/1 program with training calculations,
-                            history, estimated 1RM tracking, persistence and automated tests.
-                        </p>
-                        <div class="tags">
-                            <span class="tag">Java 17</span>
-                            <span class="tag">Maven</span>
-                            <span class="tag">JUnit 5</span>
-                            <span class="tag">Gson</span>
-                            <span class="tag">OOP</span>
-                        </div>
-                        <div class="project-link">View project <span>↗</span></div>
-                    </a>
-                </div>
+        <section id="about" class="section about-section ruled-section">
+            <div class="section-label">
+                <span>02</span>
+                <span>About</span>
             </div>
-        </section>
 
-        <section id="about">
-            <div class="container">
-                <div class="section-heading">
-                    <div class="section-kicker">About</div>
-                    <div>
-                        <h2>Technical curiosity meets real-world experience.</h2>
-                        <p>
-                            Before Computer Science, I spent more than 15 years working across retail, operations,
-                            process development and supply chain. That background shapes how I approach technology:
-                            I care about what systems actually do for the people using them.
-                        </p>
-                    </div>
+            <div class="about-grid">
+                <div class="about-statement">
+                    <p>I like technology that earns its place by solving a real problem.</p>
                 </div>
 
-                <div class="split-grid">
-                    <div class="panel">
-                        <h3>From operations to software</h3>
-                        <p>
-                            My previous work included data-driven planning, SaaS systems, process improvement,
-                            supplier collaboration and translating operational problems into practical solutions.
-                            Today I'm combining that perspective with formal Computer Science studies.
-                        </p>
-                    </div>
-
-                    <div class="panel">
-                        <h3>How I like to work</h3>
-                        <p>
-                            I enjoy understanding how systems work, breaking difficult problems into manageable pieces,
-                            documenting what I learn and building software that has a clear purpose rather than technology
-                            for technology's sake.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="skills">
-            <div class="container">
-                <div class="section-heading">
-                    <div class="section-kicker">Toolkit</div>
-                    <div>
-                        <h2>Growing technical foundations.</h2>
-                        <p>
-                            My focus is not collecting technology names. I'm building strong fundamentals and adding tools
-                            as projects require them.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="skill-groups">
-                    <div class="skill-group">
-                        <h3>Programming</h3>
-                        <p>Java · Python · SQL · C · Object-Oriented Programming · Data Structures & Algorithms</p>
-                    </div>
-
-                    <div class="skill-group">
-                        <h3>Software & data</h3>
-                        <p>REST APIs · FastAPI · SQLite · Relational Databases · JSON · Automated Testing · GitHub Actions</p>
-                    </div>
-
-                    <div class="skill-group">
-                        <h3>Tools & interests</h3>
-                        <p>Git · GitHub · Maven · JUnit · Flutter · AI-assisted development · Applied AI · Backend systems</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact">
-            <div class="container">
-                <div class="contact-card">
-                    <div class="section-kicker">Contact</div>
-                    <h2>Interested in building something useful?</h2>
+                <div class="about-copy">
                     <p>
-                        I'm always interested in meeting people working with software, data and AI — whether it's a project,
-                        an internship, a hackathon or simply a good technical conversation.
+                        Before Computer Science, I spent more than 15 years working across retail, supply chain, operations and process development. My work involved planning systems, data, SaaS tools, stakeholders and the messy reality between a system and the people who actually use it.
                     </p>
-                    <div class="hero-actions">
-                        <a class="button button-primary" href="mailto:anwahlbe@gmail.com">Email me</a>
-                        <a class="button button-secondary" href="https://www.linkedin.com/in/anders-wahlberg-126a4917a" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-                        <a class="button button-secondary" href="https://github.com/AndersWahlberg" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-                    </div>
+                    <p>
+                        That background now shapes how I approach software. I am interested in understanding systems from first principles, building practical things, and connecting technical decisions to real-world needs.
+                    </p>
+                </div>
+            </div>
+
+            <div class="background-list" aria-label="Professional background">
+                <div class="background-row">
+                    <span class="row-label">Background</span>
+                    <span>Supply Chain Specialist</span>
+                    <span>Broman Group</span>
+                </div>
+                <div class="background-row">
+                    <span></span>
+                    <span>Warranty Supervisor</span>
+                    <span>Retail / Operations</span>
+                </div>
+                <div class="background-row">
+                    <span></span>
+                    <span>Shift Manager & Sales</span>
+                    <span>Retail</span>
+                </div>
+                <div class="background-row education-row">
+                    <span class="row-label">Now</span>
+                    <span>Computer Science</span>
+                    <span>University of Turku</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="toolkit" class="section ruled-section">
+            <div class="section-label">
+                <span>03</span>
+                <span>Toolkit</span>
+            </div>
+
+            <div class="toolkit-grid">
+                <div class="toolkit-group">
+                    <span class="toolkit-number">A</span>
+                    <h3>Programming</h3>
+                    <p>Java<br>Python<br>SQL<br>C</p>
+                </div>
+                <div class="toolkit-group">
+                    <span class="toolkit-number">B</span>
+                    <h3>Engineering</h3>
+                    <p>Git & GitHub<br>REST APIs<br>Automated testing<br>GitHub Actions</p>
+                </div>
+                <div class="toolkit-group">
+                    <span class="toolkit-number">C</span>
+                    <h3>Foundations</h3>
+                    <p>OOP<br>Data structures & algorithms<br>Databases<br>Software engineering</p>
+                </div>
+                <div class="toolkit-group">
+                    <span class="toolkit-number">D</span>
+                    <h3>Direction</h3>
+                    <p>Applied AI<br>Data-driven systems<br>Backend development<br>System integrations</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="contact-topline">
+                <span>04 / Contact</span>
+                <span>Open to interesting conversations and opportunities.</span>
+            </div>
+
+            <a class="contact-email" href="mailto:anwahlbe@gmail.com">
+                <span>anwahlbe@gmail.com</span>
+                <span>↗</span>
+            </a>
+
+            <div class="contact-footer">
+                <div>
+                    <a href="https://github.com/AndersWahlberg" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+                    <a href="https://www.linkedin.com/in/anders-wahlberg-126a4917a" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+                </div>
+                <div class="footer-note">
+                    <span>Built with HTML & CSS.</span>
+                    <span>Hosted on GitHub Pages.</span>
+                    <span>© 2026</span>
                 </div>
             </div>
         </section>
     </main>
-
-    <footer class="footer">
-        <div class="container footer-inner">
-            <span>© 2026 Anders Wahlberg</span>
-            <span>Built with HTML & CSS · Hosted on GitHub Pages</span>
-        </div>
-    </footer>
 </body>
 </html>
