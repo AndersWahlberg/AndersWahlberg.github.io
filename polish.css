@@ -1,0 +1,153 @@
+/* Final visual polish: subtle interaction, cleaner rhythm, accessible focus states */
+
+body {
+  overflow-x: hidden;
+}
+
+#about,
+#portfolio,
+#contact {
+  scroll-margin-top: 24px;
+}
+
+.brand-block,
+.connect-block,
+.nav-pills a,
+.work-link,
+.email-chip,
+.project-meta a,
+.footer-links a {
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease,
+    box-shadow 180ms ease,
+    opacity 180ms ease,
+    text-decoration-color 180ms ease;
+}
+
+.brand-block:hover {
+  transform: translateY(-2px);
+  background: #fff8bd;
+  box-shadow: 0 8px 18px rgba(26, 25, 24, 0.05);
+}
+
+.connect-block:hover {
+  transform: translateY(-2px);
+  background: #d8edf7;
+  box-shadow: 0 8px 18px rgba(26, 25, 24, 0.05);
+}
+
+.nav-pills a:hover {
+  transform: translateY(-2px);
+  background: #dcf2e5;
+  box-shadow: 0 8px 18px rgba(26, 25, 24, 0.04);
+}
+
+.work-link {
+  background: rgba(248, 247, 244, 0);
+}
+
+.work-link:hover {
+  transform: translateY(-2px);
+  background: rgba(248, 247, 244, 0.28);
+}
+
+.work-link:hover span:last-child {
+  transform: translateX(5px);
+}
+
+.hero {
+  min-height: 980px;
+}
+
+.hero-art {
+  bottom: -118px;
+  transform: translateX(-50%) scale(.9);
+}
+
+.art-card {
+  box-shadow: 0 20px 44px rgba(26, 25, 24, 0.09);
+}
+
+.project-visual:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 36px rgba(26, 25, 24, 0.075);
+}
+
+.project-meta a,
+.footer-links a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  text-decoration-color: rgba(26, 25, 24, 0.45);
+}
+
+.project-meta a:hover,
+.footer-links a:hover {
+  text-decoration-color: currentColor;
+}
+
+.email-chip:hover {
+  transform: translateY(-2px);
+  background: #fff7b9;
+  box-shadow: 0 8px 18px rgba(26, 25, 24, 0.05);
+}
+
+.brand-block:focus-visible,
+.connect-block:focus-visible,
+.nav-pills a:focus-visible,
+.work-link:focus-visible,
+.project-visual:focus-visible,
+.project-meta a:focus-visible,
+.email-chip:focus-visible,
+.footer-links a:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 4px;
+}
+
+@media (max-width: 1100px) {
+  .hero {
+    min-height: 900px;
+  }
+
+  .hero-art {
+    bottom: -128px;
+    transform: translateX(-50%) scale(.82);
+  }
+}
+
+@media (max-width: 760px) {
+  .hero {
+    min-height: 820px;
+  }
+
+  .hero-art {
+    bottom: -122px;
+    transform: translateX(-50%) scale(.7);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 760px;
+  }
+
+  .hero-art {
+    bottom: -132px;
+    transform: translateX(-50%) scale(.58);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.001ms !important;
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
