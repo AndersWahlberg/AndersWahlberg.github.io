@@ -3,13 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Anders Wahlberg — Computer Science student at the University of Turku. Software development, data and AI.">
+  <meta name="description" content="Anders Wahlberg — Computer Science student at the University of Turku building practical software with a focus on software development, data and AI.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#e9e6e1">
+  <link rel="canonical" href="https://anderswahlberg.github.io/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://anderswahlberg.github.io/">
+  <meta property="og:title" content="Anders Wahlberg — Software, Data & AI">
+  <meta property="og:description" content="Computer Science student at the University of Turku building practical software and learning through real projects.">
+  <meta property="og:image" content="https://anderswahlberg.github.io/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Anders Wahlberg — Software, Data & AI">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Anders Wahlberg — Software, Data & AI">
+  <meta name="twitter:description" content="Computer Science student at the University of Turku building practical software and learning through real projects.">
+  <meta name="twitter:image" content="https://anderswahlberg.github.io/og-image.png">
+
   <title>Anders Wahlberg — Software, Data & AI</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="polish.css?v=20261011-3">
+  <link rel="stylesheet" href="polish.css?v=20261011-4">
+  <link rel="stylesheet" href="portfolio-sections.css?v=20261011-1">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Anders Wahlberg",
+    "url": "https://anderswahlberg.github.io/",
+    "jobTitle": "Computer Science Student",
+    "affiliation": {
+      "@type": "CollegeOrUniversity",
+      "name": "University of Turku"
+    },
+    "sameAs": [
+      "https://github.com/AndersWahlberg",
+      "https://www.linkedin.com/in/anders-wahlberg-126a4917a"
+    ],
+    "knowsAbout": [
+      "Software Development",
+      "Data",
+      "Artificial Intelligence",
+      "Java",
+      "Flutter",
+      "FastAPI"
+    ]
+  }
+  </script>
 </head>
 <body>
   <header class="site-header">
@@ -17,6 +63,7 @@
 
     <nav class="nav-pills" aria-label="Main navigation">
       <a href="#about">About</a>
+      <a href="#skills">Skills</a>
       <a href="#portfolio">Portfolio</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -99,6 +146,78 @@
           <span class="profile-label">Based In</span>
           <span class="profile-value">Turku, Finland</span>
         </div>
+      </div>
+    </section>
+
+    <section id="skills" class="skills section-pad">
+      <div class="skills-heading">
+        <div>
+          <p class="section-eyebrow">Skills &amp; tools</p>
+          <h2>What I Build With</h2>
+        </div>
+        <p>
+          A practical toolkit shaped by coursework, personal projects and a long background working with real operational systems and data.
+        </p>
+      </div>
+
+      <div class="skills-grid">
+        <article class="skill-card">
+          <span class="skill-index">01</span>
+          <h3>Software Development</h3>
+          <p>Languages and frameworks I use to turn ideas into working applications.</p>
+          <div class="skill-tags" aria-label="Software development skills">
+            <span>Java 17</span>
+            <span>Python</span>
+            <span>Dart</span>
+            <span>Flutter</span>
+            <span>OOP</span>
+            <span>REST APIs</span>
+          </div>
+        </article>
+
+        <article class="skill-card">
+          <span class="skill-index">02</span>
+          <h3>Backend &amp; Data</h3>
+          <p>Building integrations, working with structured data and understanding the systems behind the interface.</p>
+          <div class="skill-tags" aria-label="Backend and data skills">
+            <span>FastAPI</span>
+            <span>SQL</span>
+            <span>SQLite</span>
+            <span>API Integrations</span>
+            <span>Data Analysis</span>
+          </div>
+        </article>
+
+        <article class="skill-card">
+          <span class="skill-index">03</span>
+          <h3>Engineering Workflow</h3>
+          <p>Tools and practices that keep projects understandable, testable and easier to improve.</p>
+          <div class="skill-tags" aria-label="Engineering workflow skills">
+            <span>Git</span>
+            <span>GitHub</span>
+            <span>Maven</span>
+            <span>JUnit 5</span>
+            <span>GitHub Actions</span>
+            <span>CI/CD</span>
+          </div>
+        </article>
+
+        <article class="skill-card">
+          <span class="skill-index">04</span>
+          <h3>Applied AI</h3>
+          <p>Using AI as an engineering tool while learning where it adds real value and where evidence still matters.</p>
+          <div class="skill-tags" aria-label="Applied AI skills">
+            <span>LLMs</span>
+            <span>AI-Assisted Development</span>
+            <span>Applied AI</span>
+            <span>Responsible AI</span>
+          </div>
+        </article>
+      </div>
+
+      <div class="skills-learning">
+        <span>Currently exploring</span>
+        <p>Data analytics · Backend systems · Software architecture · AI engineering</p>
       </div>
     </section>
 
@@ -192,15 +311,15 @@
 
       <div class="process-list">
         <article>
-          <h3>Understand & Define</h3>
+          <h3>Understand &amp; Define</h3>
           <p>Clarify the problem, constraints, users and what a useful outcome should actually look like.</p>
         </article>
         <article>
-          <h3>Build & Test</h3>
+          <h3>Build &amp; Test</h3>
           <p>Turn the idea into a working version, validate the important parts and keep the implementation understandable.</p>
         </article>
         <article>
-          <h3>Iterate & Improve</h3>
+          <h3>Iterate &amp; Improve</h3>
           <p>Use feedback, tests and real usage to improve the product instead of polishing assumptions.</p>
         </article>
       </div>
@@ -227,6 +346,35 @@
       </div>
     </section>
 
+    <section id="resume" class="resume section-pad">
+      <div class="resume-copy">
+        <p class="resume-eyebrow">CV / Resume</p>
+        <h2>The Short Version.</h2>
+        <p>
+          I bring a long professional background into a new technical chapter: hands-on operations experience, a growing software engineering toolkit and a clear focus on data and AI.
+        </p>
+      </div>
+
+      <div class="resume-panel">
+        <div class="resume-fact">
+          <strong>15+</strong>
+          <span>years of professional experience across retail, leadership, warranty operations and supply chain</span>
+        </div>
+        <div class="resume-fact">
+          <strong>CS</strong>
+          <span>Computer Science at the University of Turku</span>
+        </div>
+        <div class="resume-fact">
+          <strong>→</strong>
+          <span>software development · data · applied AI</span>
+        </div>
+        <a class="resume-link" href="mailto:anwahlbe@gmail.com?subject=CV%20request%20-%20Anders%20Wahlberg">
+          <span>Request CV</span>
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </section>
+
     <section id="contact" class="contact section-pad">
       <h2>Useful Software.<br>Clear Thinking.<br>Good Collaboration.</h2>
       <div class="contact-stack" aria-hidden="true">
@@ -244,7 +392,7 @@
       <a href="https://www.linkedin.com/in/anders-wahlberg-126a4917a" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       <a href="mailto:anwahlbe@gmail.com">Email</a>
     </div>
-    <div class="footer-note">© 2026 Anders Wahlberg · Built with HTML & CSS · GitHub Pages</div>
+    <div class="footer-note">© 2026 Anders Wahlberg · Built with HTML &amp; CSS · GitHub Pages</div>
   </footer>
 </body>
 </html>
