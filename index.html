@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="polish.css?v=20261011-2">
+  <link rel="stylesheet" href="polish.css?v=20261011-3">
 </head>
 <body>
   <header class="site-header">
@@ -109,21 +109,33 @@
       </div>
 
       <div class="project-grid">
-        <article class="project-card">
+        <article class="project-card project-card-ethico">
           <a class="project-visual ethico-visual" href="https://github.com/AndersWahlberg/ethico-app" target="_blank" rel="noopener noreferrer" aria-label="View Ethico on GitHub">
+            <div class="cover-copy">
+              <span class="cover-kicker">Product transparency</span>
+              <strong>Scan.<br>Trace.<br>Verify.</strong>
+              <span class="cover-foot">Barcode → public data → source context</span>
+            </div>
+
             <div class="ethico-phone">
               <div class="phone-bar"></div>
               <div class="ethico-wordmark">ETHICO</div>
               <div class="barcode">
                 <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
               </div>
-              <div class="phone-copy">SCAN PRODUCT<br>TRACE SOURCES<br>CHECK CONTEXT</div>
+              <div class="phone-status"><span>EAN</span><span>READY</span></div>
             </div>
+
             <div class="ethico-orbit orbit-one">SOURCE</div>
             <div class="ethico-orbit orbit-two">TRACE</div>
             <div class="visual-caption">01 / ETHICO</div>
           </a>
+
           <div class="project-copy">
+            <div class="project-title-row">
+              <h3>Ethico</h3>
+              <span>Since AI Hackathon · 2026</span>
+            </div>
             <p>
               A mobile application exploring product transparency through barcode scanning, public data and source-backed information.
             </p>
@@ -134,8 +146,14 @@
           </div>
         </article>
 
-        <article class="project-card">
+        <article class="project-card project-card-wendler">
           <a class="project-visual wendler-visual" href="https://github.com/AndersWahlberg/wendler531" target="_blank" rel="noopener noreferrer" aria-label="View Wendler 5/3/1 on GitHub">
+            <div class="cover-copy wendler-cover-copy">
+              <span class="cover-kicker">Java CLI · training logic</span>
+              <strong>Plan.<br>Lift.<br>Track.</strong>
+              <span class="cover-foot">5/3/1 calculations → workout history → estimated 1RM</span>
+            </div>
+
             <div class="plate plate-one"><span>5</span></div>
             <div class="plate plate-two"><span>3</span></div>
             <div class="plate plate-three"><span>1</span></div>
@@ -148,7 +166,12 @@
             </div>
             <div class="visual-caption">02 / WENDLER 5/3/1</div>
           </a>
+
           <div class="project-copy">
+            <div class="project-title-row">
+              <h3>Wendler 5/3/1</h3>
+              <span>Java coursework project</span>
+            </div>
             <p>
               A Java command-line training tracker with workout calculations, history, estimated 1RM tracking, persistence and automated tests.
             </p>
