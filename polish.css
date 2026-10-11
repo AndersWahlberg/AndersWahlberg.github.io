@@ -100,14 +100,6 @@ body {
   background: #d2d6cc;
 }
 
-.ethico-visual {
-  background: #b7c8c4;
-}
-
-.wendler-visual {
-  background: #c8ced2;
-}
-
 .orbit-one,
 .plate-two,
 .highlight,
@@ -160,6 +152,229 @@ body {
   outline-offset: 4px;
 }
 
+/* Project covers: case-study composition rather than decorative mockups */
+.project-grid {
+  gap: 18px;
+}
+
+.project-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+}
+
+.project-visual {
+  isolation: isolate;
+  aspect-ratio: 1.08 / 1;
+  background-image:
+    linear-gradient(rgba(255,255,255,.08), rgba(255,255,255,0));
+}
+
+.project-visual::before {
+  inset: 14px;
+  border-color: rgba(247, 245, 241, 0.32);
+}
+
+.cover-copy {
+  position: absolute;
+  left: 6.5%;
+  top: 8%;
+  z-index: 3;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.cover-kicker {
+  margin-bottom: 20px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.cover-copy strong {
+  margin-bottom: 22px;
+  font-family: var(--serif);
+  font-size: clamp(2.7rem, 4.4vw, 5rem);
+  font-weight: 500;
+  line-height: 0.82;
+  letter-spacing: -0.04em;
+}
+
+.cover-foot {
+  max-width: 235px;
+  padding-top: 12px;
+  border-top: 1px dashed rgba(27, 27, 26, 0.4);
+  font-size: 0.68rem;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.ethico-visual {
+  background-color: #b8c9c4;
+}
+
+.ethico-phone {
+  left: auto;
+  right: 7%;
+  top: 50%;
+  width: 43%;
+  height: 72%;
+  padding: 22px 20px 20px;
+  transform: translateY(-50%) rotate(2.4deg);
+  border-radius: 30px;
+  background: #f5f2eb;
+  box-shadow: 16px 18px 0 rgba(27, 27, 26, 0.08);
+}
+
+.ethico-visual:hover .ethico-phone {
+  transform: translateY(-51%) rotate(1.2deg);
+}
+
+.phone-bar {
+  width: 31%;
+  height: 5px;
+  margin: 0 auto 23px;
+}
+
+.ethico-wordmark {
+  margin-bottom: 19px;
+  font-size: clamp(1.8rem, 2.8vw, 3.1rem);
+}
+
+.barcode {
+  height: 80px;
+  gap: 4px;
+  margin-bottom: 22px;
+}
+
+.phone-status {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(27, 27, 26, 0.24);
+  font-size: 0.59rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+}
+
+.ethico-orbit {
+  width: auto;
+  height: auto;
+  padding: 9px 13px;
+  border-radius: 999px;
+  font-size: 0.58rem;
+}
+
+.orbit-one {
+  left: auto;
+  right: 42%;
+  top: 18%;
+  transform: rotate(-5deg);
+}
+
+.orbit-two {
+  right: 4.5%;
+  bottom: 13%;
+  transform: rotate(4deg);
+}
+
+.visual-caption {
+  left: 6.5%;
+  bottom: 5.5%;
+  font-size: 0.68rem;
+}
+
+.wendler-visual {
+  background-color: #c8ced1;
+}
+
+.wendler-cover-copy {
+  width: 34%;
+}
+
+.wendler-visual .plate {
+  z-index: 1;
+  opacity: 0.9;
+  box-shadow: inset 0 0 0 12px rgba(27, 27, 26, 0.05);
+}
+
+.wendler-visual .plate-one {
+  left: auto;
+  right: 20%;
+  top: 10%;
+  width: clamp(160px, 16vw, 220px);
+  height: auto;
+  aspect-ratio: 1;
+}
+
+.wendler-visual .plate-two {
+  right: 5%;
+  top: 13%;
+  width: clamp(132px, 13vw, 185px);
+  height: auto;
+  aspect-ratio: 1;
+}
+
+.wendler-visual .plate-three {
+  left: auto;
+  right: 31%;
+  bottom: 7%;
+  width: clamp(118px, 11vw, 160px);
+  height: auto;
+  aspect-ratio: 1;
+}
+
+.wendler-visual .terminal-card {
+  z-index: 2;
+  right: 6%;
+  bottom: 8%;
+  width: 45%;
+  min-height: 39%;
+  padding: 22px;
+  transform: rotate(1.8deg);
+}
+
+.project-copy {
+  min-height: 0;
+  padding-top: 26px;
+}
+
+.project-title-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 14px;
+}
+
+.project-title-row h3 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.025em;
+}
+
+.project-title-row > span {
+  color: var(--muted);
+  font-size: 0.66rem;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: 0.08em;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.project-copy > p {
+  margin-bottom: 22px;
+}
+
 @media (max-width: 1100px) and (min-width: 761px) {
   .site-header {
     grid-template-columns: auto 1fr auto;
@@ -190,6 +405,18 @@ body {
   .hero-art {
     bottom: -128px;
     transform: translateX(-50%) scale(.82);
+  }
+
+  .project-visual {
+    aspect-ratio: 1.32 / 1;
+  }
+
+  .cover-copy {
+    width: 31%;
+  }
+
+  .cover-copy strong {
+    font-size: clamp(2.6rem, 5.4vw, 4.6rem);
   }
 }
 
@@ -268,16 +495,158 @@ body {
   }
 
   .project-grid {
-    gap: 36px;
+    gap: 44px;
   }
 
   .project-visual {
-    aspect-ratio: 1.06 / 1;
+    aspect-ratio: .94 / 1;
+  }
+
+  .cover-copy,
+  .wendler-cover-copy {
+    left: 7%;
+    top: 7%;
+    width: 72%;
+  }
+
+  .cover-kicker {
+    margin-bottom: 11px;
+    font-size: 0.58rem;
+  }
+
+  .cover-copy strong {
+    margin-bottom: 0;
+    font-size: clamp(2.25rem, 10.5vw, 3.15rem);
+    line-height: 0.84;
+  }
+
+  .cover-foot {
+    display: none;
+  }
+
+  .ethico-phone {
+    right: 6%;
+    top: auto;
+    bottom: 7%;
+    width: 55%;
+    height: 54%;
+    padding: 17px 15px 15px;
+    transform: rotate(2deg);
+    border-radius: 23px;
+  }
+
+  .ethico-visual:hover .ethico-phone {
+    transform: rotate(1deg) translateY(-2px);
+  }
+
+  .phone-bar {
+    margin-bottom: 15px;
+  }
+
+  .ethico-wordmark {
+    margin-bottom: 12px;
+    font-size: 1.75rem;
+  }
+
+  .barcode {
+    height: 58px;
+    margin-bottom: 14px;
+  }
+
+  .phone-status {
+    padding-top: 9px;
+    font-size: 0.5rem;
+  }
+
+  .ethico-orbit {
+    padding: 7px 10px;
+    font-size: 0.5rem;
+  }
+
+  .orbit-one {
+    left: 7%;
+    right: auto;
+    top: auto;
+    bottom: 18%;
+  }
+
+  .orbit-two {
+    left: 7%;
+    right: auto;
+    bottom: 10%;
+  }
+
+  .visual-caption {
+    left: 7%;
+    bottom: 4%;
+    font-size: 0.58rem;
+  }
+
+  .wendler-visual .plate-one {
+    right: 23%;
+    top: auto;
+    bottom: 24%;
+    width: 142px;
+  }
+
+  .wendler-visual .plate-two {
+    right: 5%;
+    top: auto;
+    bottom: 27%;
+    width: 118px;
+  }
+
+  .wendler-visual .plate-three {
+    right: 36%;
+    bottom: 7%;
+    width: 105px;
+  }
+
+  .wendler-visual .plate span {
+    transform: translateY(-25px);
+    font-size: 1.85rem;
+  }
+
+  .wendler-visual .terminal-card {
+    right: 6%;
+    bottom: 7%;
+    width: 57%;
+    min-height: 34%;
+    padding: 16px;
+  }
+
+  .terminal-head {
+    margin-bottom: 12px;
+    padding-bottom: 9px;
+  }
+
+  .terminal-line {
+    margin: 6px 0;
+    font-size: 0.72rem;
   }
 
   .project-copy {
     min-height: 0;
-    padding-bottom: 22px;
+    padding: 22px 2px 0;
+  }
+
+  .project-title-row {
+    align-items: flex-start;
+    margin-bottom: 12px;
+  }
+
+  .project-title-row h3 {
+    font-size: 1.75rem;
+  }
+
+  .project-title-row > span {
+    max-width: 140px;
+    font-size: 0.58rem;
+  }
+
+  .project-meta {
+    flex-direction: column;
+    gap: 8px;
   }
 
   .contact-stack {
@@ -339,6 +708,29 @@ body {
   .strength-card {
     padding-left: 24px;
     padding-right: 24px;
+  }
+
+  .cover-copy strong {
+    font-size: 2.22rem;
+  }
+
+  .ethico-phone {
+    width: 58%;
+    height: 51%;
+  }
+
+  .wendler-visual .terminal-card {
+    width: 61%;
+  }
+
+  .project-title-row {
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  .project-title-row > span {
+    max-width: none;
+    text-align: left;
   }
 }
 
