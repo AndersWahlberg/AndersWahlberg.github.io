@@ -28,7 +28,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="polish.css?v=20261012-1">
+  <link rel="stylesheet" href="polish.css?v=20261012-photos">
   <link rel="stylesheet" href="portfolio-sections.css?v=20261012-2">
 
   <script type="application/ld+json">
@@ -86,18 +86,13 @@
         </a>
       </div>
 
-      <div class="hero-art" aria-hidden="true">
-        <div class="art-card art-card-back">
-          <span>DATA</span>
-          <span>AI</span>
-          <span>SYSTEMS</span>
-        </div>
-        <div class="art-card art-card-main">
-          <div class="art-topline"><span>AW / 2026</span><span>01</span></div>
-          <div class="art-code"><span></span><span></span><span></span><span></span><span></span></div>
-          <div class="art-footer">BUILD · TEST · ITERATE</div>
-        </div>
-      </div>
+      <figure class="hero-portrait">
+        <img src="assets/anders-portrait-960.webp"
+             srcset="assets/anders-portrait-640.webp 640w, assets/anders-portrait-960.webp 960w, assets/anders-portrait-1440.webp 1440w"
+             sizes="(max-width: 760px) min(100vw - 56px, 360px), (max-width: 1100px) 360px, (max-width: 1600px) 30vw, 480px"
+             width="960" height="1440" alt="Anders Wahlberg smiling outdoors"
+             loading="eager" fetchpriority="high" decoding="async">
+      </figure>
     </section>
 
     <section id="about" class="about section-pad">
@@ -155,6 +150,14 @@
     <section class="process section-pad"><div class="process-heading"><h2>How I Work Through Problems</h2><p>I try to keep the process simple: understand the real problem, build something concrete, then improve it with evidence.</p></div><div class="process-list"><article><h3>Understand &amp; Define</h3><p>Clarify the problem, constraints, users and what a useful outcome should actually look like.</p></article><article><h3>Build &amp; Test</h3><p>Turn the idea into a working version, validate the important parts and keep the implementation understandable.</p></article><article><h3>Iterate &amp; Improve</h3><p>Use feedback, tests and real usage to improve the product instead of polishing assumptions.</p></article></div></section>
 
     <section class="strengths section-pad"><h2>A Different Starting Point</h2><div class="strength-grid"><article class="strength-card"><span class="strength-number">01</span><p>More than 15 years in real operational environments taught me to see the gap between how a system is designed and how it is actually used.</p><span class="highlight">Practical Perspective</span></article><article class="strength-card"><span class="strength-number">02</span><p>I enjoy breaking messy problems into smaller parts, working with data and asking what evidence would change the decision.</p><span class="highlight">Analytical Mindset</span></article><article class="strength-card"><span class="strength-number">03</span><p>I’m still early in software development, so I focus on building, documenting, testing and learning quickly rather than pretending to know everything.</p><span class="highlight">Learning Velocity</span></article></div></section>
+
+    <figure class="editorial-photo">
+      <img src="assets/anders-landscape-960.webp"
+           srcset="assets/anders-landscape-640.webp 640w, assets/anders-landscape-960.webp 960w, assets/anders-landscape-1440.webp 1440w, assets/anders-landscape-2080.webp 2080w"
+           sizes="(max-width: 760px) calc(100vw - 28px), (max-width: 1096px) calc(100vw - 56px), 1040px"
+           width="1440" height="960" alt="Anders Wahlberg overlooking fields and a river in evening light"
+           loading="lazy" decoding="async">
+    </figure>
 
     <section id="resume" class="resume section-pad">
       <div class="resume-copy"><p class="resume-eyebrow">CV / Resume</p><h2>The Short Version.</h2><p>I bring a long professional background into a new technical chapter: hands-on operations experience, a growing software engineering toolkit and a clear focus on data and AI.</p></div>
