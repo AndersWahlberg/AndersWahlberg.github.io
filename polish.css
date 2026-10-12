@@ -15,14 +15,15 @@
 }
 
 body {
-  overflow-x: hidden;
   background: var(--bg);
 }
 
 #about,
+#skills,
 #portfolio,
+#resume,
 #contact {
-  scroll-margin-top: 24px;
+  scroll-margin-top: 2rem;
 }
 
 .brand-block,
@@ -188,9 +189,9 @@ body {
 
 .cover-kicker {
   margin-bottom: 20px;
-  font-size: 0.68rem;
+  font-size: 0.75rem;
   font-weight: 700;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
@@ -207,7 +208,7 @@ body {
   max-width: 235px;
   padding-top: 12px;
   border-top: 1px dashed rgba(27, 27, 26, 0.4);
-  font-size: 0.68rem;
+  font-size: 0.75rem;
   line-height: 1.5;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -257,9 +258,9 @@ body {
   gap: 12px;
   padding-top: 12px;
   border-top: 1px solid rgba(27, 27, 26, 0.24);
-  font-size: 0.59rem;
+  font-size: 0.75rem;
   font-weight: 700;
-  letter-spacing: 0.13em;
+  letter-spacing: 0.06em;
 }
 
 .ethico-orbit {
@@ -267,7 +268,7 @@ body {
   height: auto;
   padding: 9px 13px;
   border-radius: 999px;
-  font-size: 0.58rem;
+  font-size: 0.75rem;
 }
 
 .orbit-one {
@@ -286,7 +287,7 @@ body {
 .visual-caption {
   left: 6.5%;
   bottom: 5.5%;
-  font-size: 0.68rem;
+  font-size: 0.75rem;
 }
 
 .wendler-visual {
@@ -298,9 +299,19 @@ body {
 }
 
 .wendler-visual .plate {
+  container-type: inline-size;
   z-index: 1;
   opacity: 0.9;
   box-shadow: inset 0 0 0 12px rgba(27, 27, 26, 0.05);
+}
+
+/* Keep numerals above the centre hole as each plate changes size. */
+.wendler-visual .plate span {
+  position: absolute;
+  top: 7%;
+  transform: none;
+  font-size: 32cqi;
+  line-height: 1;
 }
 
 .wendler-visual .plate-one {
@@ -321,10 +332,10 @@ body {
 }
 
 .wendler-visual .plate-three {
-  left: auto;
-  right: 31%;
-  bottom: 7%;
-  width: clamp(118px, 11vw, 160px);
+  right: auto;
+  left: 7%;
+  bottom: 12%;
+  width: clamp(100px, 10vw, 160px);
   height: auto;
   aspect-ratio: 1;
 }
@@ -363,7 +374,7 @@ body {
 
 .project-title-row > span {
   color: var(--muted);
-  font-size: 0.66rem;
+  font-size: 0.75rem;
   font-weight: 700;
   line-height: 1.35;
   letter-spacing: 0.08em;
@@ -436,7 +447,7 @@ body {
 
   .nav-pills {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     width: 100%;
     gap: 5px;
   }
@@ -460,7 +471,7 @@ body {
     max-width: 320px;
     margin-left: auto;
     margin-right: auto;
-    font-size: 0.68rem;
+    font-size: 0.75rem;
     line-height: 1.45;
   }
 
@@ -499,40 +510,52 @@ body {
   }
 
   .project-visual {
-    aspect-ratio: .94 / 1;
+    display: grid;
+    aspect-ratio: auto;
+    gap: 18px 12px;
+    padding: 28px 22px 22px;
+  }
+
+  .project-visual > * {
+    position: relative;
+    inset: auto;
   }
 
   .cover-copy,
   .wendler-cover-copy {
-    left: 7%;
-    top: 7%;
-    width: 72%;
+    width: auto;
   }
 
   .cover-kicker {
-    margin-bottom: 11px;
-    font-size: 0.58rem;
+    margin-bottom: 12px;
   }
 
   .cover-copy strong {
     margin-bottom: 0;
-    font-size: clamp(2.25rem, 10.5vw, 3.15rem);
-    line-height: 0.84;
+    font-size: clamp(2.2rem, 7vw, 3.15rem);
+    line-height: 0.95;
   }
 
   .cover-foot {
     display: none;
   }
 
+  .ethico-visual {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+    align-items: center;
+  }
+
   .ethico-phone {
-    right: 6%;
-    top: auto;
-    bottom: 7%;
-    width: 55%;
-    height: 54%;
-    padding: 17px 15px 15px;
+    width: 100%;
+    max-width: 220px;
+    justify-self: end;
+    aspect-ratio: 0.62;
+    height: auto;
+    min-height: 210px;
+    padding: 16px 10px;
     transform: rotate(2deg);
     border-radius: 23px;
+    box-shadow: 7px 9px 0 rgba(27, 27, 26, 0.08);
   }
 
   .ethico-visual:hover .ethico-phone {
@@ -545,74 +568,72 @@ body {
 
   .ethico-wordmark {
     margin-bottom: 12px;
-    font-size: 1.75rem;
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
   }
 
   .barcode {
     height: 58px;
     margin-bottom: 14px;
+    gap: 3px;
   }
 
   .phone-status {
     padding-top: 9px;
-    font-size: 0.5rem;
+    gap: 4px;
+    letter-spacing: 0;
   }
 
   .ethico-orbit {
+    display: grid;
+    justify-self: start;
     padding: 7px 10px;
-    font-size: 0.5rem;
-  }
-
-  .orbit-one {
-    left: 7%;
-    right: auto;
-    top: auto;
-    bottom: 18%;
-  }
-
-  .orbit-two {
-    left: 7%;
-    right: auto;
-    bottom: 10%;
+    transform: none;
   }
 
   .visual-caption {
-    left: 7%;
-    bottom: 4%;
-    font-size: 0.58rem;
+    grid-column: 1 / -1;
   }
 
-  .wendler-visual .plate-one {
-    right: 23%;
-    top: auto;
-    bottom: 24%;
-    width: 142px;
+  .wendler-visual {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: center;
   }
 
-  .wendler-visual .plate-two {
-    right: 5%;
-    top: auto;
-    bottom: 27%;
-    width: 118px;
+  .wendler-cover-copy {
+    grid-column: 1 / -1;
   }
 
-  .wendler-visual .plate-three {
-    right: 36%;
-    bottom: 7%;
-    width: 105px;
+  .wendler-cover-copy strong {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.15em;
   }
 
-  .wendler-visual .plate span {
-    transform: translateY(-25px);
-    font-size: 1.85rem;
+  .wendler-cover-copy strong br {
+    display: none;
+  }
+
+  .wendler-visual .plate {
+    inset: auto;
+    width: 100%;
+    max-width: 140px;
+    height: auto;
+    justify-self: center;
+    box-shadow: inset 0 0 0 6px rgba(27, 27, 26, 0.05);
   }
 
   .wendler-visual .terminal-card {
-    right: 6%;
-    bottom: 7%;
-    width: 57%;
-    min-height: 34%;
+    grid-column: 1 / -1;
+    inset: auto;
+    width: 100%;
+    min-height: 0;
     padding: 16px;
+    transform: none;
+    box-shadow: 7px 9px 0 rgba(27, 27, 26, 0.08);
+  }
+
+  .wendler-visual:hover .terminal-card {
+    transform: translateY(-2px);
   }
 
   .terminal-head {
@@ -622,7 +643,7 @@ body {
 
   .terminal-line {
     margin: 6px 0;
-    font-size: 0.72rem;
+    font-size: 0.85rem;
   }
 
   .project-copy {
@@ -641,7 +662,6 @@ body {
 
   .project-title-row > span {
     max-width: 140px;
-    font-size: 0.58rem;
   }
 
   .project-meta {
@@ -708,19 +728,6 @@ body {
   .strength-card {
     padding-left: 24px;
     padding-right: 24px;
-  }
-
-  .cover-copy strong {
-    font-size: 2.22rem;
-  }
-
-  .ethico-phone {
-    width: 58%;
-    height: 51%;
-  }
-
-  .wendler-visual .terminal-card {
-    width: 61%;
   }
 
   .project-title-row {

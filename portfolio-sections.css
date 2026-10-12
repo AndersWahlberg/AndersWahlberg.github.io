@@ -1,10 +1,5 @@
 /* Skills, resume and metadata-era polish */
 
-#skills,
-#resume {
-  scroll-margin-top: 28px;
-}
-
 /* Four-item navigation stays readable across breakpoints */
 .nav-pills {
   gap: 5px;
@@ -39,7 +34,7 @@
   line-height: 0.9;
 }
 
-.skills-heading p {
+.skills-heading > p {
   max-width: 620px;
   margin: 0 0 8px auto;
   font-family: var(--serif);
@@ -64,7 +59,7 @@
 
 .skill-index {
   margin-bottom: 42px;
-  font-size: 0.68rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.13em;
 }
@@ -99,7 +94,7 @@
   border: 1px solid var(--soft-line);
   border-radius: 999px;
   background: rgba(247, 245, 241, 0.66);
-  font-size: 0.68rem;
+  font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.01em;
 }
@@ -117,7 +112,7 @@
 
 .skills-learning span {
   flex: 0 0 auto;
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -143,7 +138,7 @@
 
 .resume-eyebrow {
   margin-bottom: 10px;
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -228,7 +223,7 @@
     gap: 18px;
   }
 
-  .skills-heading p {
+  .skills-heading > p {
     margin-left: 0;
   }
 
@@ -243,15 +238,14 @@
 }
 
 @media (max-width: 760px) {
-  .nav-pills {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
   .nav-pills a {
     min-width: 0;
     padding-left: 3px;
     padding-right: 3px;
-    font-size: 0.86rem;
+    font-size: 1rem;
+    min-height: 44px;
+    display: grid;
+    place-items: center;
   }
 
   .skills {
@@ -266,7 +260,7 @@
     font-size: clamp(3rem, 13vw, 4.5rem);
   }
 
-  .skills-heading p {
+  .skills-heading > p {
     font-size: 1.14rem;
   }
 
@@ -312,10 +306,6 @@
 }
 
 @media (max-width: 480px) {
-  .nav-pills a {
-    font-size: 0.78rem;
-  }
-
   .resume-fact {
     grid-template-columns: 90px 1fr;
     gap: 14px;
