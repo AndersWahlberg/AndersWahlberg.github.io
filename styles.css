@@ -172,75 +172,6 @@ p {
   transform: translateX(6px);
 }
 
-.hero-art {
-  position: absolute;
-  left: 50%;
-  bottom: -228px;
-  width: 540px;
-  height: 320px;
-  pointer-events: none;
-  transform: translateX(-50%) scale(.96);
-  transform-origin: center bottom;
-}
-
-.art-card {
-  position: absolute;
-  border: 1px solid rgba(26, 25, 24, 0.42);
-  box-shadow: 0 24px 55px rgba(26, 25, 24, 0.1);
-}
-
-.art-card-back {
-  left: 38px;
-  top: 62px;
-  width: 235px;
-  height: 172px;
-  display: grid;
-  place-content: center;
-  gap: 7px;
-  background: var(--lavender);
-  transform: rotate(-9deg);
-  font-family: var(--serif);
-  font-size: 2.05rem;
-  line-height: 0.83;
-}
-
-.art-card-main {
-  right: 28px;
-  top: 28px;
-  width: 315px;
-  height: 225px;
-  padding: 20px;
-  background: #202020;
-  color: #f8f6f0;
-  transform: rotate(6deg);
-}
-
-.art-topline,
-.art-footer {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.72rem;
-  letter-spacing: 0.11em;
-}
-
-.art-code {
-  display: grid;
-  gap: 11px;
-  margin: 36px 0 31px;
-}
-
-.art-code span {
-  display: block;
-  height: 7px;
-  background: #f8f6f0;
-}
-
-.art-code span:nth-child(1) { width: 78%; }
-.art-code span:nth-child(2) { width: 52%; background: #a6d8ff; }
-.art-code span:nth-child(3) { width: 88%; }
-.art-code span:nth-child(4) { width: 64%; background: #fffaa6; }
-.art-code span:nth-child(5) { width: 44%; }
-
 .section-pad {
   width: min(calc(100% - 56px), var(--max));
   margin: 0 auto;
@@ -820,11 +751,6 @@ p {
     min-height: 930px;
   }
 
-  .hero-art {
-    bottom: -205px;
-    transform: translateX(-50%) scale(.9);
-  }
-
   .about {
     grid-template-columns: 1fr;
     gap: 70px;
@@ -879,12 +805,6 @@ p {
     max-width: 470px;
     margin-bottom: 40px;
     font-size: 1.32rem;
-  }
-
-  .hero-art {
-    bottom: -162px;
-    width: 390px;
-    transform: translateX(-50%) scale(.74);
   }
 
   .section-pad {
@@ -1026,11 +946,6 @@ p {
 
   .work-link {
     font-size: 1.12rem;
-  }
-
-  .hero-art {
-    bottom: -150px;
-    transform: translateX(-50%) scale(.62);
   }
 
   .project-copy > p {
