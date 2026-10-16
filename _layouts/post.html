@@ -1,0 +1,14 @@
+---
+layout: writing
+---
+<article class="post">
+  <header class="post-header">
+    <a class="text-link" href="{{ '/blog/' | relative_url }}">← Back to Writing</a>
+    <p class="post-date"><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%d %b %Y' }}</time></p>
+    <h1>{{ page.title | escape }}</h1>
+    {% if page.description %}<p class="post-description">{{ page.description | escape }}</p>{% endif %}
+    {% if page.tags.size > 0 %}<ul class="post-tags" aria-label="Tags">{% for tag in page.tags %}<li>{{ tag | escape }}</li>{% endfor %}</ul>{% endif %}
+  </header>
+  <div class="post-content">{{ content }}</div>
+  <nav class="post-end" aria-label="Article navigation"><a class="text-link" href="{{ '/blog/' | relative_url }}">← Back to Writing</a></nav>
+</article>

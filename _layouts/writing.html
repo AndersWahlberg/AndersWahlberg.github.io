@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% assign description = page.description | default: "Writing on software, data, AI, learning and things worth thinking about." %}
+  <title>{{ page.title | escape }} — Anders Wahlberg</title>
+  <meta name="description" content="{{ description | escape }}">
+  <meta name="theme-color" content="#e9e6e1">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+  <meta property="og:title" content="{{ page.title | escape }} — Anders Wahlberg">
+  <meta property="og:description" content="{{ description | escape }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ '/og-image.png' | absolute_url }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Anders Wahlberg — Software, Data &amp; AI">
+  {% if page.layout == 'post' %}<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">{% endif %}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page.title | escape }} — Anders Wahlberg">
+  <meta name="twitter:description" content="{{ description | escape }}">
+  <meta name="twitter:image" content="{{ '/og-image.png' | absolute_url }}">
+  <link rel="icon" type="image/svg+xml" href="{{ '/favicon.svg' | relative_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/styles.css' | relative_url }}?v=20261013-1">
+  <link rel="stylesheet" href="{{ '/polish.css' | relative_url }}?v=20261013-1">
+  <link rel="stylesheet" href="{{ '/portfolio-sections.css' | relative_url }}?v=20261013-1">
+  <link rel="stylesheet" href="{{ '/blog.css' | relative_url }}?v=20261016-1">
+</head>
+<body class="writing-page">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <a class="brand-block" href="{{ '/' | relative_url }}">Anders Wahlberg</a>
+    <nav class="nav-pills" aria-label="Main navigation">
+      <a href="{{ '/' | relative_url }}#about">About</a>
+      <a href="{{ '/' | relative_url }}#skills">Skills</a>
+      <a href="{{ '/' | relative_url }}#portfolio">Portfolio</a>
+      <a href="{{ '/blog/' | relative_url }}" {% if page.layout == 'post' %}aria-current="true"{% else %}aria-current="page"{% endif %}>Blog</a>
+      <a href="{{ '/' | relative_url }}#resume">CV</a>
+      <a href="{{ '/' | relative_url }}#contact">Contact</a>
+    </nav>
+    <a class="connect-block" href="mailto:anwahlbe@gmail.com">Let’s Connect</a>
+  </header>
+  <main id="main-content" class="writing-main" tabindex="-1">{{ content }}</main>
+  <footer class="writing-footer"><a href="{{ '/' | relative_url }}">← Back to portfolio</a><span>Anders Wahlberg</span></footer>
+</body>
+</html>

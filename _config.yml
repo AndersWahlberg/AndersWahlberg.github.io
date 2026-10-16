@@ -1,0 +1,17 @@
+title: Anders Wahlberg
+url: "https://anderswahlberg.github.io"
+baseurl: ""
+timezone: Europe/Helsinki
+markdown: kramdown
+highlighter: rouge
+permalink: /blog/:year/:month/:day/:title/
+future: false
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+exclude:
+  - BLOGGING.md
+  - README.md
