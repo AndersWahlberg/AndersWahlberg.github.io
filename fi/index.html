@@ -31,8 +31,8 @@ translation_key: home
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css?v=20261013-1">
-  <link rel="stylesheet" href="/polish.css?v=20261016-2">
+  <link rel="stylesheet" href="/styles.css?v=20261016-cards">
+  <link rel="stylesheet" href="/polish.css?v=20261016-cards">
   <link rel="stylesheet" href="/portfolio-sections.css?v=20261013-1">
 
   <link rel="stylesheet" href="/blog.css?v=20261016-1">
@@ -199,7 +199,9 @@ translation_key: home
       </div>
     </section>
 
-    <section id="contact" class="contact section-pad"><h2>Hyödyllisiä ohjelmistoja.<br>Selkeää ajattelua.<br>Hyvää yhteistyötä.</h2><div class="contact-stack" aria-hidden="true"><div class="mini-card mini-one">KOODI</div><div class="mini-card mini-two">DATA</div><div class="mini-card mini-three">TEKOÄLY</div></div><a class="email-chip" href="mailto:anwahlbe@gmail.com">anwahlbe@gmail.com</a></section>
+    <section id="contact" class="contact section-pad"><h2>Hyödyllisiä ohjelmistoja.<br>Selkeää ajattelua.<br>Hyvää yhteistyötä.</h2>
+      {% include contact-graphic.html software="Koodi" data="Data" ai="Tekoäly" %}
+      <a class="email-chip" href="mailto:anwahlbe@gmail.com">anwahlbe@gmail.com</a></section>
   </main>
   <footer class="site-footer"><div class="footer-links"><a href="https://github.com/AndersWahlberg" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.linkedin.com/in/anders-wahlberg-126a4917a" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="mailto:anwahlbe@gmail.com">Sähköposti</a></div><div class="footer-note">© 2026 Anders Wahlberg · Toteutus: HTML ja CSS · GitHub Pages</div></footer>
 </body>
