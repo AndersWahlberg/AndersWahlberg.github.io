@@ -10,7 +10,7 @@ tags:
   - Yhteiskunta
 ---
 
-**Kirjoittajan huomautus:** Tämä artikkeli sai alkunsa lyhyestä esseestä, jonka kirjoitin huhtikuussa 2025 Turun yliopiston AI Methods -kurssille. Alkuperäisen tehtävän tarkoituksena oli pohtia yleistä tekoälyä, sen suhdetta nykyisiin tekoälyteknologioihin ja sitä, voisiko yleinen tekoäly joskus olla mahdollista. Olen sittemmin laajentanut, muokannut ja päivittänyt esseetä julkaistavaksi täällä. Tämä on myös blogini ensimmäinen kirjoitus.
+**Kirjoittajan huomautus:** Tämä artikkeli sai alkunsa lyhyestä esseestä, jonka kirjoitin huhtikuussa 2025 Turun yliopiston Tekoälyn menetelmät -kurssille. Alkuperäisen tehtävän tarkoituksena oli pohtia yleistä tekoälyä, sen suhdetta nykyisiin tekoälyteknologioihin ja sitä, voisiko yleinen tekoäly joskus olla mahdollista. Olen sittemmin laajentanut, muokannut ja päivittänyt esseetä julkaistavaksi täällä. Tämä on myös blogini ensimmäinen kirjoitus.
 
 Tekoälystä on tullut yksi viime vuosien keskeisistä teknologisista teemoista. Vaikka sitä on kehitetty vuosikymmeniä, suuren osan historiastaan se pysyi lähinnä tutkimuksen ja teknologia-alan piirissä. Tilanne muuttui merkittävästi vuonna 2022, kun OpenAI julkaisi ChatGPT:n. Tekoäly ei yhtäkkiä ollutkaan enää asia, josta keskustelivat pääasiassa tutkijat, insinöörit ja teknologiayritykset. Siitä tuli teknologiaa, jonka kanssa miljoonat tavalliset ihmiset pystyivät toimimaan suoraan.
 
