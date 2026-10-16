@@ -1,3 +1,8 @@
+---
+lang: en
+translation_key: cv
+permalink: /cv.html
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,10 +21,13 @@
     a:focus-visible,button:focus-visible{outline:2px solid var(--ink);outline-offset:4px}
     @media(prefers-reduced-motion:reduce){.toolbar button:hover,.toolbar a:hover{transform:none}}
   </style>
+{% include alternates.html %}
+<link rel="stylesheet" href="/languages.css?v=20261016-1">
 </head>
 <body>
   <div class="toolbar">
     <a href="index.html">← Back to portfolio</a>
+    {% include languages.html %}
     <div class="toolbar-actions">
       <a href="assets/Anders-Wahlberg-CV.pdf" rel="nofollow" download="Anders-Wahlberg-CV.pdf">Download PDF ↓</a>
       <button type="button" onclick="window.print()">Print / Save as PDF</button>

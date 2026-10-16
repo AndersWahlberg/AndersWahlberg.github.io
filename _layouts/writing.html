@@ -1,5 +1,7 @@
+{% assign fi = false %}{% if page.lang == 'fi' %}{% assign fi = true %}{% endif %}
+{% assign home = '/' %}{% assign blog = '/blog/' %}{% if fi %}{% assign home = '/fi/' %}{% assign blog = '/fi/blog/' %}{% endif %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ page.lang | default: 'en' }}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,22 +31,24 @@
   <link rel="stylesheet" href="{{ '/polish.css' | relative_url }}?v=20261013-1">
   <link rel="stylesheet" href="{{ '/portfolio-sections.css' | relative_url }}?v=20261013-1">
   <link rel="stylesheet" href="{{ '/blog.css' | relative_url }}?v=20261016-1">
+{% include alternates.html %}
+<link rel="stylesheet" href="/languages.css?v=20261016-1">
 </head>
 <body class="writing-page">
-  <a class="skip-link" href="#main-content">Skip to content</a>
+  <a class="skip-link" href="#main-content">{% if fi %}Siirry sisältöön{% else %}Skip to content{% endif %}</a>
   <header class="site-header">
-    <a class="brand-block" href="{{ '/' | relative_url }}">Anders Wahlberg</a>
-    <nav class="nav-pills" aria-label="Main navigation">
-      <a href="{{ '/' | relative_url }}#about">About</a>
-      <a href="{{ '/' | relative_url }}#skills">Skills</a>
-      <a href="{{ '/' | relative_url }}#portfolio">Portfolio</a>
-      <a href="{{ '/blog/' | relative_url }}" {% if page.layout == 'post' %}aria-current="true"{% else %}aria-current="page"{% endif %}>Blog</a>
-      <a href="{{ '/' | relative_url }}#resume">CV</a>
-      <a href="{{ '/' | relative_url }}#contact">Contact</a>
+    <a class="brand-block" href="{{ home | relative_url }}">Anders Wahlberg</a>
+    <nav class="nav-pills" aria-label="{% if fi %}Päänavigaatio{% else %}Main navigation{% endif %}">
+      <a href="{{ home | relative_url }}#about">{% if fi %}Minusta{% else %}About{% endif %}</a>
+      <a href="{{ home | relative_url }}#skills">{% if fi %}Osaaminen{% else %}Skills{% endif %}</a>
+      <a href="{{ home | relative_url }}#portfolio">{% if fi %}Projektit{% else %}Portfolio{% endif %}</a>
+      <a href="{{ blog | relative_url }}" {% if page.layout == 'post' %}aria-current="true"{% else %}aria-current="page"{% endif %}>{% if fi %}Blogi{% else %}Blog{% endif %}</a>
+      <a href="{{ home | relative_url }}#resume">CV</a>
+      <a href="{{ home | relative_url }}#contact">{% if fi %}Yhteys{% else %}Contact{% endif %}</a>
     </nav>
-    <a class="connect-block" href="mailto:anwahlbe@gmail.com">Let’s Connect</a>
+    {% include languages.html %}
   </header>
   <main id="main-content" class="writing-main" tabindex="-1">{{ content }}</main>
-  <footer class="writing-footer"><a href="{{ '/' | relative_url }}">← Back to portfolio</a><span>Anders Wahlberg</span></footer>
+  <footer class="writing-footer"><a href="{{ home | relative_url }}">{% if fi %}← Takaisin portfolioon{% else %}← Back to portfolio{% endif %}</a><span>Anders Wahlberg</span></footer>
 </body>
 </html>

@@ -1,5 +1,7 @@
 ---
 layout: writing
+lang: en
+translation_key: blog
 title: Writing
 description: "Writing helps me understand things better. Notes on software, data, AI, learning and things worth thinking about."
 ---
@@ -10,9 +12,9 @@ description: "Writing helps me understand things better. Notes on software, data
     <p>I use this space to work through ideas, explain what I’m learning and share thoughts on topics I find interesting. The idea for this blog was inspired by a lecture by Juha-Matti Santala, who spoke about the value of writing as a way to structure your thinking and learn to explain complex ideas more clearly — both to yourself and to others. Most posts will revolve around software, data, AI and technology, but not necessarily all of them.</p>
   </div>
 </header>
-{% if site.posts.size > 0 %}
+{% assign posts = site.posts | where: 'lang', page.lang | sort: 'date' | reverse %}
+{% if posts.size > 0 %}
 <section class="post-list" aria-label="Articles">
-  {% assign posts = site.posts | sort: 'date' | reverse %}
   {% for post in posts %}
   <article class="post-entry">
     <div class="entry-meta"><span aria-hidden="true">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%d %b %Y' }}</time></div>

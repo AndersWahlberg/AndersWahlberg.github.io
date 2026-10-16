@@ -1,6 +1,8 @@
 ---
 title: "Artificial General Intelligence: Technology, Society, and the Question of What Comes Next"
 date: 2026-10-16
+lang: en
+translation_key: agi
 description: "Exploring general intelligence, brain emulation, and the questions of control and responsibility that shape the future of AI."
 tags:
   - Artificial Intelligence

@@ -1,0 +1,2 @@
+{% assign variants = site.pages | concat: site.posts | where: 'translation_key', page.translation_key %}
+{% for variant in variants %}<link rel="alternate" hreflang="{{ variant.lang }}" href="{{ variant.url | absolute_url }}">{% endfor %}

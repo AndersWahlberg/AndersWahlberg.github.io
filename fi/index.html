@@ -1,0 +1,206 @@
+---
+lang: fi
+translation_key: home
+---
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Anders Wahlberg — Turun yliopiston tietojenkäsittelytieteen opiskelija. Kiinnostuksen kohteinani ohjelmistokehitys, data ja tekoäly.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#e9e6e1">
+  <link rel="canonical" href="https://anderswahlberg.github.io/fi/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://anderswahlberg.github.io/fi/">
+  <meta property="og:title" content="Anders Wahlberg — Ohjelmistot, data ja tekoäly">
+  <meta property="og:description" content="Turun yliopiston tietojenkäsittelytieteen opiskelija. Rakennan käytännöllisiä ohjelmistoja ja opin tekemällä.">
+  <meta property="og:image" content="https://anderswahlberg.github.io/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Anders Wahlberg — Ohjelmistot, data ja tekoäly">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Anders Wahlberg — Ohjelmistot, data ja tekoäly">
+  <meta name="twitter:description" content="Turun yliopiston tietojenkäsittelytieteen opiskelija. Rakennan käytännöllisiä ohjelmistoja ja opin tekemällä.">
+  <meta name="twitter:image" content="https://anderswahlberg.github.io/og-image.png">
+
+  <title>Anders Wahlberg — Ohjelmistot, data ja tekoäly</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css?v=20261013-1">
+  <link rel="stylesheet" href="/polish.css?v=20261016-2">
+  <link rel="stylesheet" href="/portfolio-sections.css?v=20261013-1">
+
+  <link rel="stylesheet" href="/blog.css?v=20261016-1">
+
+  <script>
+    // Start mobile visits at the hero, while preserving explicit section links.
+    if (window.matchMedia('(max-width: 760px)').matches) {
+      if ('scrollRestoration' in history) {
+        history.scrollRestoration = window.location.hash ? 'auto' : 'manual';
+      }
+      window.addEventListener('pageshow', function () {
+        if (!window.location.hash) window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+      });
+    }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Anders Wahlberg",
+    "url": "https://anderswahlberg.github.io/fi/",
+    "jobTitle": "Tietojenkäsittelytieteen opiskelija",
+    "affiliation": {
+      "@type": "CollegeOrUniversity",
+      "name": "Turun yliopisto"
+    },
+    "sameAs": [
+      "https://github.com/AndersWahlberg",
+      "https://www.linkedin.com/in/anders-wahlberg-126a4917a"
+    ],
+    "knowsAbout": [
+      "Ohjelmistokehitys",
+      "Data",
+      "Artificial Intelligence",
+      "Java",
+      "Flutter",
+      "FastAPI"
+    ]
+  }
+  </script>
+{% include alternates.html %}
+<link rel="stylesheet" href="/languages.css?v=20261016-1">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand-block" href="#top">Anders Wahlberg</a>
+
+    <nav class="nav-pills" aria-label="Päänavigaatio">
+      <a href="#about">Minusta</a>
+      <a href="#skills">Osaaminen</a>
+      <a href="#portfolio">Projektit</a>
+      <a href="blog/">Blogi</a>
+      <a href="#resume">CV</a>
+      <a href="#contact">Yhteys</a>
+    </nav>
+
+    {% include languages.html %}
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="hero-kicker">Tietojenkäsittelytiede · Turun yliopisto</p>
+        <h1>OHJELMISTOJA<br>OIKEISIIN<br>TARPEISIIN</h1>
+        <p class="hero-intro">
+          Rakennan käytännöllisiä ohjelmistoja ja opin muuttamalla todellisia ongelmia toimiviksi ratkaisuiksi.
+          Keskityn tällä hetkellä ohjelmistokehitykseen, dataan ja tekoälyyn.
+        </p>
+        <a class="work-link" href="#portfolio">
+          <span>Tutustu projekteihini</span>
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
+
+      <figure class="hero-portrait">
+        <img src="/assets/anders-portrait-960.webp"
+             srcset="/assets/anders-portrait-640.webp 640w, /assets/anders-portrait-960.webp 960w, /assets/anders-portrait-1440.webp 1440w"
+             sizes="(max-width: 760px) min(100vw - 56px, 360px), (max-width: 1100px) 360px, (max-width: 1600px) 30vw, 480px"
+             width="960" height="1440" alt="Anders Wahlberg hymyilee ulkona"
+             loading="eager" fetchpriority="high" decoding="async">
+      </figure>
+    </section>
+
+    <section id="about" class="about section-pad">
+      <div class="about-lead">
+        <h2>Olen Anders, tietojenkäsittelytieteen opiskelija. Arvostan selkeyttä, hyödyllisiä järjestelmiä ja tekemällä oppimista.</h2>
+        <p>Ennen ohjelmistokehitystä työskentelin yli 15 vuotta kaupan, toimitusketjujen, päivittäisen toiminnan ja prosessien kehittämisen parissa. Taustani antaa teknologiaan käytännöllisen näkökulman: minulle on tärkeää, mitä järjestelmä todella tekee, ketä se auttaa ja ratkaiseeko se oikean ongelman.</p>
+      </div>
+      <div class="profile-panel">
+        <h3>Profiili</h3>
+        <div class="profile-row"><span class="profile-label">Rooli</span><span class="profile-value">Tietojenkäsittelytieteen opiskelija<br>Tuleva ohjelmisto-, data- ja tekoälykehittäjä</span></div>
+        <div class="profile-row"><span class="profile-label">Painopisteet</span><span class="profile-value">Ohjelmistotekniikka<br>Soveltava tekoäly<br>Dataan perustuvat järjestelmät<br>Taustajärjestelmät ja integraatiot</span></div>
+        <div class="profile-row"><span class="profile-label">2025–nykyhetki</span><span class="profile-value">Tietojenkäsittelytieteen kandidaatti- ja maisteriohjelma<br>Turun yliopisto</span></div>
+        <div class="profile-row"><span class="profile-label">2019–2025</span><span class="profile-value">Toimitusketjuasiantuntija<br>Broman Group Oy</span></div>
+        <div class="profile-row"><span class="profile-label">2016–2019</span><span class="profile-value">Takuuosaston esihenkilö<br>Motonet Oy</span></div>
+        <div class="profile-row"><span class="profile-label">2013–2016</span><span class="profile-value">Vuoropäällikkö<br>Motonet Oy</span></div>
+        <div class="profile-row"><span class="profile-label">Kotipaikka</span><span class="profile-value">Turku, Suomi</span></div>
+      </div>
+    </section>
+
+    <section id="skills" class="skills section-pad">
+      <div class="skills-heading"><div><p class="section-eyebrow">Osaaminen ja työkalut</p><h2>Työkaluni ja osaamiseni</h2></div><p>Osaamiseni rakentuu opinnoista, omista projekteista sekä pitkästä kokemuksesta käytännön järjestelmien ja datan parissa.</p></div>
+      <div class="skills-grid">
+        <article class="skill-card"><span class="skill-index">01</span><h3>Ohjelmistokehitys</h3><p>Kielet ja ohjelmistokehykset, joilla muutan ideat toimiviksi sovelluksiksi.</p><div class="skill-tags" aria-label="Ohjelmistokehityksen osaaminen"><span>Java 17</span><span>Python</span><span>Dart</span><span>Flutter</span><span>OOP</span><span>REST APIs</span></div></article>
+        <article class="skill-card"><span class="skill-index">02</span><h3>Taustajärjestelmät ja data</h3><p>Integraatioiden rakentamista, rakenteisen datan käsittelyä ja käyttöliittymän taustalla toimivien järjestelmien ymmärtämistä.</p><div class="skill-tags" aria-label="Taustajärjestelmien ja datan osaaminen"><span>FastAPI</span><span>SQL</span><span>SQLite</span><span>Rajapintaintegraatiot</span><span>Data-analyysi</span></div></article>
+        <article class="skill-card"><span class="skill-index">03</span><h3>Kehitystyön käytännöt</h3><p>Työkalut ja käytännöt, joilla projektit pysyvät ymmärrettävinä, testattavina ja helposti kehitettävinä.</p><div class="skill-tags" aria-label="Kehitystyön työkalut ja käytännöt"><span>Git</span><span>GitHub</span><span>Maven</span><span>JUnit 5</span><span>GitHub Actions</span><span>CI/CD</span></div></article>
+        <article class="skill-card"><span class="skill-index">04</span><h3>Soveltava tekoäly</h3><p>Käytän tekoälyä kehitystyön apuna ja opettelen tunnistamaan, missä se tuo todellista hyötyä ja missä tarvitaan lisää näyttöä.</p><div class="skill-tags" aria-label="Soveltavan tekoälyn osaaminen"><span>LLMs</span><span>Tekoälyavusteinen kehitys</span><span>Soveltava tekoäly</span><span>Vastuullinen tekoäly</span></div></article>
+      </div>
+      <div class="skills-learning"><span>Perehdyn parhaillaan</span><p>Data-analytiikka · Taustajärjestelmät · Ohjelmistoarkkitehtuuri · Tekoälyjärjestelmien kehitys</p></div>
+    </section>
+
+    <section id="portfolio" class="portfolio section-pad">
+      <div class="portfolio-heading"><p class="section-eyebrow">Valittuja töitä</p><h2>Projekteja oikeisiin tarpeisiin</h2></div>
+      <div class="project-grid">
+        <article class="project-card project-card-ethico">
+          <a class="project-visual ethico-visual" href="https://github.com/AndersWahlberg/ethico-app" target="_blank" rel="noopener noreferrer" aria-label="Tutustu Ethicoon GitHubissa">
+            <div class="cover-copy"><span class="cover-kicker">Tuotteiden läpinäkyvyys</span><strong>Lue.<br>Jäljitä.<br>Varmista.</strong><span class="cover-foot">Viivakoodi → julkinen data → lähteet</span></div>
+            <div class="ethico-phone"><div class="phone-bar"></div><div class="ethico-wordmark">ETHICO</div><div class="barcode"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="phone-status"><span>EAN</span><span>VALMIS</span></div></div>
+            <div class="ethico-orbit orbit-one">LÄHDE</div><div class="ethico-orbit orbit-two">JÄLKI</div><div class="visual-caption">01 / ETHICO</div>
+          </a>
+          <div class="project-copy"><div class="project-title-row"><h3>Ethico</h3></div><p>Mobiilisovellus, joka tutkii tuotteiden läpinäkyvyyttä viivakoodien, julkisen datan ja lähteisiin perustuvan tiedon avulla.</p><div class="project-meta"><span>Flutter · FastAPI · SQLite · REST · CI</span><a href="https://github.com/AndersWahlberg/ethico-app" target="_blank" rel="noopener noreferrer">Tutustu projektiin ↗</a></div></div>
+        </article>
+
+        <article class="project-card project-card-wendler">
+          <a class="project-visual wendler-visual" href="https://github.com/AndersWahlberg/wendler531" target="_blank" rel="noopener noreferrer" aria-label="Tutustu Wendler 5/3/1:een GitHubissa">
+            <div class="cover-copy wendler-cover-copy"><span class="cover-kicker">Java CLI · harjoittelulogiikka</span><strong><span>Suunnittele.</span><br><span>Nosta.</span><br><span>Seuraa.</span></strong><span class="cover-foot">5/3/1-laskenta → harjoitushistoria → arvioitu 1RM</span></div>
+            <div class="plate plate-one"><span>5</span></div><div class="plate plate-two"><span>3</span></div><div class="plate plate-three"><span>1</span></div>
+            <div class="terminal-card"><div class="terminal-head">WENDLER531 / JAVA</div><div class="terminal-line">TM 90%</div><div class="terminal-line">VIIKKO 3</div><div class="terminal-line accent-line">75 / 85 / 95</div><div class="terminal-line">TALLENNA ✓</div></div>
+            <div class="visual-caption">02 / WENDLER 5/3/1</div>
+          </a>
+          <div class="project-copy"><div class="project-title-row"><h3>Wendler 5/3/1</h3><span>Java-kurssiprojekti</span></div><p>Javalla tehty komentorivisovellus harjoittelun seurantaan. Mukana ovat harjoituslaskenta, historia, arvioidun yhden toiston maksimin seuranta, tietojen tallennus ja automaattiset testit.</p><div class="project-meta"><span>Java 17 · Maven · JUnit 5 · Gson · OOP</span><a href="https://github.com/AndersWahlberg/wendler531" target="_blank" rel="noopener noreferrer">Tutustu projektiin ↗</a></div></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="process section-pad"><div class="process-heading"><h2>Näin ratkaisen ongelmia</h2><p>Pidän työskentelytavan yksinkertaisena: ymmärrän ensin todellisen ongelman, rakennan konkreettisen ratkaisun ja kehitän sitä havaintojen perusteella.</p></div><div class="process-list"><article><h3>Ymmärrä ja määrittele</h3><p>Selvitän ongelman, reunaehdot ja käyttäjät sekä sen, millainen lopputulos olisi oikeasti hyödyllinen.</p></article><article><h3>Rakenna ja testaa</h3><p>Teen ideasta toimivan version, varmistan tärkeimpien osien toiminnan ja pidän toteutuksen ymmärrettävänä.</p></article><article><h3>Arvioi ja kehitä</h3><p>Kehitän tuotetta palautteen, testien ja todellisen käytön perusteella pelkkien oletusten sijaan.</p></article></div></section>
+
+    <section class="strengths section-pad"><h2>Erilainen lähtökohta</h2><div class="strength-grid"><article class="strength-card"><span class="strength-number">01</span><p>Yli 15 vuotta käytännön työympäristöissä opetti näkemään eron sen välillä, miten järjestelmä on suunniteltu ja miten sitä todella käytetään.</p><span class="highlight">Käytännön näkökulma</span></article><article class="strength-card"><span class="strength-number">02</span><p>Pidän monimutkaisten ongelmien pilkkomisesta, datan käsittelystä ja sen pohtimisesta, millainen näyttö muuttaisi päätöstä.</p><span class="highlight">Analyyttinen ajattelu</span></article><article class="strength-card"><span class="strength-number">03</span><p>Olen ohjelmistokehityksessä vielä matkani alussa. Siksi keskityn rakentamiseen, dokumentointiin, testaamiseen ja uuden oppimiseen enkä oleta tietäväni kaikkea.</p><span class="highlight">Halu oppia</span></article></div></section>
+
+    <figure class="editorial-photo">
+      <img src="/assets/anders-landscape-960.webp"
+           srcset="/assets/anders-landscape-640.webp 640w, /assets/anders-landscape-960.webp 960w, /assets/anders-landscape-1440.webp 1440w, /assets/anders-landscape-2080.webp 2080w"
+           sizes="(max-width: 760px) calc(100vw - 28px), (max-width: 1096px) calc(100vw - 56px), 1040px"
+           width="1440" height="960" alt="Anders Wahlberg katsoo peltojen ja joen yli iltavalossa"
+           loading="lazy" decoding="async">
+    </figure>
+
+    <section class="writing-teaser section-pad" aria-labelledby="writing-heading">
+      <h2 id="writing-heading">KIRJOITUKSIA</h2>
+      <div><p class="writing-lead">Kirjoittaminen auttaa minua ymmärtämään asioita paremmin.</p><p>Ajatuksia ohjelmistoista, datasta, tekoälystä, oppimisesta, työstä ja muista pohdinnan arvoisista asioista.</p><a class="text-link" href="blog/">Lue blogia →</a></div>
+    </section>
+
+    <section id="resume" class="resume section-pad">
+      <div class="resume-copy"><p class="resume-eyebrow">Ansioluettelo</p><h2>Lyhyesti minusta.</h2><p>Tuon pitkän työurani kokemuksen uuteen tekniseen vaiheeseen: käytännön työn tuntemusta, karttuvaa ohjelmistotekniikan osaamista sekä kiinnostusta dataan ja tekoälyyn.</p></div>
+      <div class="resume-panel">
+        <div class="resume-fact"><strong>15+</strong><span>vuotta työkokemusta kaupasta, esihenkilötyöstä, takuutoiminnoista ja toimitusketjuista</span></div>
+        <div class="resume-fact"><strong>TK</strong><span>Tietojenkäsittelytiede Turun yliopistossa</span></div>
+        <div class="resume-fact"><strong>→</strong><span>ohjelmistokehitys · data · soveltava tekoäly</span></div>
+        <div class="resume-actions">
+          <a class="resume-link" href="cv.html" rel="nofollow" aria-label="Katso Anders Wahlbergin ansioluettelo"><span>Katso CV</span><span aria-hidden="true">→</span></a>
+          <a class="resume-link resume-link-download" href="/assets/Anders-Wahlberg-CV.pdf" rel="nofollow" download="Anders-Wahlberg-CV.pdf" aria-label="Lataa Anders Wahlbergin englanninkielinen ansioluettelo PDF-tiedostona"><span>Lataa CV (englanniksi)</span><span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact section-pad"><h2>Hyödyllisiä ohjelmistoja.<br>Selkeää ajattelua.<br>Hyvää yhteistyötä.</h2><div class="contact-stack" aria-hidden="true"><div class="mini-card mini-one">KOODI</div><div class="mini-card mini-two">DATA</div><div class="mini-card mini-three">TEKOÄLY</div></div><a class="email-chip" href="mailto:anwahlbe@gmail.com">anwahlbe@gmail.com</a></section>
+  </main>
+  <footer class="site-footer"><div class="footer-links"><a href="https://github.com/AndersWahlberg" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.linkedin.com/in/anders-wahlberg-126a4917a" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="mailto:anwahlbe@gmail.com">Sähköposti</a></div><div class="footer-note">© 2026 Anders Wahlberg · Toteutus: HTML ja CSS · GitHub Pages</div></footer>
+</body>
+</html>

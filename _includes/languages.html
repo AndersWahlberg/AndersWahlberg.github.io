@@ -1,0 +1,7 @@
+{% assign variants = site.pages | concat: site.posts | where: 'translation_key', page.translation_key %}
+<nav class="language-switch" aria-label="{% if page.lang == 'fi' %}Kieli{% else %}Language{% endif %}">
+  {% for code in site.languages %}
+    {% assign variant = variants | where: 'lang', code | first %}
+    {% if variant %}<a href="{{ variant.url | relative_url }}" lang="{{ code }}" hreflang="{{ code }}" aria-label="{% if code == 'fi' %}Suomeksi{% else %}In English{% endif %}"{% if code == page.lang %} aria-current="page"{% endif %}>{{ code | upcase }}</a>{% else %}<span lang="{{ page.lang }}">{% if page.lang == 'fi' %}Englanninkielistä versiota ei vielä ole{% else %}Finnish translation not yet available{% endif %}</span>{% endif %}
+  {% endfor %}
+</nav>

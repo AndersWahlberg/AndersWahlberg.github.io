@@ -1,5 +1,31 @@
 # Adding a post
 
+## Two languages
+
+English lives at `/` and Finnish at `/fi/`. Each language has its own blog list.
+Add `lang: en` or `lang: fi` and a shared `translation_key` to matching posts.
+For example, both versions of the AGI article use `translation_key: agi`.
+Use a unique key for each new article; only one published post per language may use that key.
+
+Finnish posts must set an explicit permalink, for example:
+
+```yaml
+lang: fi
+translation_key: my-new-article
+permalink: /fi/blog/2026/10/16/uusi-kirjoitus/
+```
+
+Use distinct filenames for the two posts. Keep dates aligned unless the translations
+were deliberately published on different dates. Language links and `hreflang`
+metadata are generated from published pages and posts with the same key.
+An unpublished or missing translation is shown as unavailable, without a broken link.
+Keep references in their original language and preserve source URLs.
+
+Home and CV translations are in `fi/index.html` and `fi/cv.html`; update both language
+versions when facts change. Styles and images remain shared. The downloadable CV PDF
+is currently English and is labeled as such on Finnish pages. The Finnish CV can be
+printed or saved as a PDF with the button on its page.
+
 No CMS, Node setup or local build is needed. You can write directly on GitHub.
 
 1. Open the `_posts` folder.
