@@ -659,45 +659,87 @@ p {
   line-height: 0.84;
 }
 
+/* In-flow folios: the centre card stays above the two exposed corner titles. */
 .contact-stack {
-  position: relative;
-  width: 310px;
-  height: 145px;
-  margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: repeat(26, minmax(0, 1fr));
+  align-items: start;
+  isolation: isolate;
+  width: min(calc(100% - 24px), 544px);
+  padding-block: 24px;
+  margin-bottom: clamp(32px, 4vw, 48px);
 }
 
 .mini-card {
-  position: absolute;
-  display: grid;
-  place-items: center;
-  width: 125px;
-  height: 84px;
-  border: 1px solid var(--ink);
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(8px, 1.5vw, 14px);
+  min-width: 0;
+  min-height: 0;
+  aspect-ratio: 1.08;
+  padding: clamp(12px, 2.4vw, 22px);
+  border: 1px solid rgba(27, 27, 26, 0.2);
+  border-radius: 3px;
+  box-shadow:
+    0 2px 3px rgba(27, 27, 26, 0.04),
+    0 18px 30px -20px rgba(27, 27, 26, 0.36);
+}
+
+.mini-art {
+  display: block;
+  flex: 1;
+  width: 100%;
+  min-height: 0;
+}
+
+.mini-title {
+  flex: none;
+  padding-top: 8px;
+  border-top: 1px solid currentColor;
+  font-family: var(--serif);
+  font-size: clamp(1.375rem, 3.8vw, 2.25rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.025em;
+  white-space: nowrap;
 }
 
 .mini-one {
-  left: 36px;
-  top: 34px;
-  background: #1c1c1c;
-  color: white;
-  transform: rotate(-12deg);
+  z-index: 1;
+  grid-column: 1 / 13;
+  margin-top: clamp(48px, 7vw, 76px);
+  background: #252524;
+  color: var(--paper);
+  transform: rotate(-10deg);
 }
 
 .mini-two {
-  left: 105px;
-  top: 8px;
+  z-index: 3;
+  grid-column: 8 / 20;
   background: var(--lavender);
-  transform: rotate(7deg);
+  color: var(--ink);
+  transform: rotate(2deg);
+}
+
+.mini-two .mini-title {
+  padding-top: 0;
+  padding-bottom: 8px;
+  border-top: 0;
+  border-bottom: 1px solid currentColor;
 }
 
 .mini-three {
-  right: 24px;
-  top: 50px;
+  z-index: 2;
+  grid-column: 15 / 27;
+  margin-top: clamp(50px, 6.8vw, 72px);
   background: var(--blue);
-  transform: rotate(-4deg);
+  color: var(--ink);
+  transform: rotate(9deg);
+}
+
+.mini-three .mini-title {
+  text-align: right;
 }
 
 .email-chip {

@@ -632,11 +632,6 @@ body {
     gap: 8px;
   }
 
-  .contact-stack {
-    transform: scale(.9);
-    margin-top: -6px;
-    margin-bottom: 34px;
-  }
 }
 
 @media (max-width: 480px) {
