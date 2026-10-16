@@ -71,3 +71,4 @@
 .post-content pre.highlight { padding: 20px; background: var(--paper); font-family: ui-monospace, Consolas, monospace; }
 .post-content code { font-family: ui-monospace, Consolas, monospace; }
 @media (max-width: 760px) { .post-content pre.highlight { padding: 14px; } }
+.post-content .references > p { padding-inline-start: 1.5em; text-indent: -1.5em; margin-bottom: 1.5em; }
