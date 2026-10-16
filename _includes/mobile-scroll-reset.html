@@ -1,0 +1,98 @@
+<script>
+  (function () {
+    var mobileViewport = window.matchMedia('(max-width: 760px)');
+    var pendingResets = [];
+    var ownsRestoration = false;
+    var previousRestoration;
+
+    function shouldReset() {
+      return mobileViewport.matches && !window.location.hash;
+    }
+
+    function syncRestoration() {
+      if (!('scrollRestoration' in history)) return;
+
+      if (shouldReset()) {
+        if (!ownsRestoration) previousRestoration = history.scrollRestoration;
+        history.scrollRestoration = 'manual';
+        ownsRestoration = true;
+      } else if (ownsRestoration) {
+        history.scrollRestoration = previousRestoration;
+        ownsRestoration = false;
+      }
+    }
+
+    function cancelPendingResets() {
+      pendingResets.forEach(function (timer) { window.clearTimeout(timer); });
+      pendingResets = [];
+    }
+
+    function resetToTop() {
+      syncRestoration();
+      if (!shouldReset()) return;
+
+      // Bypass the site's smooth scrolling for this synchronous reset only.
+      var elements = [document.documentElement];
+      if (document.body) elements.push(document.body);
+      var previousBehaviors = elements.map(function (element) {
+        var style = element.style;
+        var previous = {
+          style: style,
+          value: style.getPropertyValue('scroll-behavior'),
+          priority: style.getPropertyPriority('scroll-behavior')
+        };
+        style.setProperty('scroll-behavior', 'auto', 'important');
+        return previous;
+      });
+
+      try {
+        window.scrollTo(0, 0);
+        document.documentElement.scrollTop = 0;
+        if (document.body) document.body.scrollTop = 0;
+      } finally {
+        previousBehaviors.forEach(function (previous) {
+          if (previous.value) {
+            previous.style.setProperty('scroll-behavior', previous.value, previous.priority);
+          } else {
+            previous.style.removeProperty('scroll-behavior');
+          }
+        });
+      }
+    }
+
+    function resetAndRetry() {
+      cancelPendingResets();
+      resetToTop();
+      if (!shouldReset()) return;
+
+      // Some mobile browsers restore after load/pageshow, including BFCache returns.
+      [100, 350].forEach(function (delay) {
+        pendingResets.push(window.setTimeout(resetToTop, delay));
+      });
+    }
+
+    resetToTop();
+    document.addEventListener('DOMContentLoaded', resetToTop);
+    window.addEventListener('load', resetAndRetry);
+    window.addEventListener('pageshow', resetAndRetry);
+    window.addEventListener('pagehide', cancelPendingResets);
+    window.addEventListener('hashchange', function () {
+      if (window.location.hash) {
+        cancelPendingResets();
+        syncRestoration();
+      } else {
+        resetAndRetry();
+      }
+    });
+
+    function onViewportChange() {
+      cancelPendingResets();
+      syncRestoration();
+    }
+    if (mobileViewport.addEventListener) {
+      mobileViewport.addEventListener('change', onViewportChange);
+    } else if (mobileViewport.addListener) {
+      mobileViewport.addListener(onViewportChange);
+    }
+  }());
+</script>

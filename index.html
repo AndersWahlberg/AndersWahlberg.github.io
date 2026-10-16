@@ -37,17 +37,7 @@ translation_key: home
 
   <link rel="stylesheet" href="blog.css?v=20261016-1">
 
-  <script>
-    // Start mobile visits at the hero, while preserving explicit section links.
-    if (window.matchMedia('(max-width: 760px)').matches) {
-      if ('scrollRestoration' in history) {
-        history.scrollRestoration = window.location.hash ? 'auto' : 'manual';
-      }
-      window.addEventListener('pageshow', function () {
-        if (!window.location.hash) window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
-      });
-    }
-  </script>
+  {% include mobile-scroll-reset.html %}
 
   <script type="application/ld+json">
   {
