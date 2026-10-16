@@ -323,6 +323,19 @@ body {
   aspect-ratio: 1;
 }
 
+/* Align the desktop plates in reading order; keep the mobile grid unchanged. */
+@media (min-width: 761px) {
+  .wendler-visual .plate {
+    top: 25%;
+    right: auto;
+    bottom: auto;
+    transform: translateY(-50%);
+  }
+  .wendler-visual .plate-one { left: 37%; width: 24%; }
+  .wendler-visual .plate-two { left: 56%; width: 21%; }
+  .wendler-visual .plate-three { left: 73%; width: 18%; }
+}
+
 .wendler-visual .terminal-card {
   z-index: 2;
   right: 6%;
